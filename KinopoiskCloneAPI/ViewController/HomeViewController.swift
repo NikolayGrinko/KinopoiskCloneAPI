@@ -1,5 +1,5 @@
 //
-//  DownloadViewController.swift
+//  ViewController.swift
 //  KinopoiskCloneAPI
 //
 //  Created by Николай Гринько on 09.10.2023.
@@ -7,12 +7,14 @@
 
 import UIKit
 
-class DownloadViewController: UIViewController {
- 
+class HomeViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       // title = "DovnloadVC"
+        //title = "HomeVC"
         view.backgroundColor = .systemBackground
     }
-    
+
+
 }
+
