@@ -11,7 +11,7 @@ class DownloadViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-       // title = "DovnloadVC"
+        title = "DovnloadVC"
         view.backgroundColor = .systemBackground
     }
     

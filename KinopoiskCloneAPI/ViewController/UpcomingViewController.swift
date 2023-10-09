@@ -11,7 +11,7 @@ class UpcomingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "UncomingVC"
+        title = "UncomingVC"
         view.backgroundColor = .systemBackground
     }
     
