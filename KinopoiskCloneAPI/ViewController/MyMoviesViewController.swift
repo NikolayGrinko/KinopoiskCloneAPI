@@ -1,17 +1,17 @@
 //
-//  DownloadViewController.swift
+//  MyMoviesViewController.swift
 //  KinopoiskCloneAPI
 //
-//  Created by Николай Гринько on 09.10.2023.
+//  Created by Николай Гринько on 11.10.2023.
 //
 
 import UIKit
 
-class DownloadViewController: UIViewController {
+class MyMoviesViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "DovnloadVC"
+        title = "Мое"
         view.backgroundColor = .systemBackground
     }
     

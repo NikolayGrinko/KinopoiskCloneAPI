@@ -15,31 +15,35 @@ class TabBarController: UITabBarController {
         
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
-        let vc3 = UINavigationController(rootViewController: SearchViewController())
-        let vc4 = UINavigationController(rootViewController: DownloadViewController())
+        let vc2 = UINavigationController(rootViewController: MediaViewController())
+        let vc3 = UINavigationController(rootViewController: MyMoviesViewController())
+        let vc4 = UINavigationController(rootViewController: SearchViewController())
+        let vc5 = UINavigationController(rootViewController: ProfileViewController())
        
         vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "play.circle")
-        vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-        vc4.tabBarItem.image = UIImage(systemName: "arrow.down.to.line")
-        
+        vc2.tabBarItem.image = UIImage(systemName: "doc.plaintext")
+        vc3.tabBarItem.image = UIImage(systemName: "bookmark")
+        vc4.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        vc5.tabBarItem.image = UIImage(systemName: "person.crop.circle")
+//        
 //        vc1.tabBarItem.image = UIImage(named: "home")
-//        vc2.tabBarItem.image = UIImage(named: "play")
-//        vc3.tabBarItem.image = UIImage(named: "search")
-//        vc4.tabBarItem.image = UIImage(named: "download")
+//        vc2.tabBarItem.image = UIImage(named: "media")
+//        vc3.tabBarItem.image = UIImage(named: "moye")
+//        vc4.tabBarItem.image = UIImage(named: "search")
+//        vc5.tabBarItem.image = UIImage(named: "profile")
         
-        vc1.title = "Home"
-        vc2.title = "Upcoming"
-        vc3.title = "Search"
-        vc4.title = "Downloads"
+        vc1.title = "Главное"
+        vc2.title = "Медиа"
+        vc3.title = "Моё"
+        vc4.title = "Поиск"
+        vc5.title = "Профиль"
         
      
-        tabBar.unselectedItemTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-        tabBar.tintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 1, green: 0.8280770183, blue: 0, alpha: 1)
 
-        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
             
             }
        
