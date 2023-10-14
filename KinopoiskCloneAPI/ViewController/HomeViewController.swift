@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     }()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = "Главное"
@@ -49,6 +50,8 @@ class HomeViewController: UIViewController {
      
         configureHeroHeaderView()
     }
+    
+   
     
     private func configureHeroHeaderView() {
         
