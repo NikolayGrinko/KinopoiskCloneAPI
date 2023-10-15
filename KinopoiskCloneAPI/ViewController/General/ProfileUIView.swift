@@ -189,7 +189,7 @@ class ProfileUIView: UIView {
         return imageView
     }()
     
-    private let ToInviteFriendButton: UIButton = {
+    private let toInviteFriendButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(systemName: "chevron.right")
         // между контентом
@@ -204,9 +204,45 @@ class ProfileUIView: UIView {
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
           //debugPrint("Tapped One Button!")
         }))
-        button.frame = CGRect(x: 15, y: 530, width: 350, height: 120)
+        button.frame = CGRect(x: 15, y: 660, width: 350, height: 120)
         return button
     }()
+    
+    private let getPointsLabel: UILabel = {
+        let nameAvatar = UILabel()
+        nameAvatar.text = "Получить 300 баллов"
+        nameAvatar.frame = CGRect(x: 15, y: 10, width: 190, height: 20)
+        nameAvatar.font = .boldSystemFont(ofSize: 18)
+        nameAvatar.textColor = .white
+        return nameAvatar
+    }()
+    
+    private let imageViewPoints: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "points")
+        imageView.frame = CGRect(x: 250, y: 20, width: 90, height: 80)
+        return imageView
+    }()
+    
+    private let nterPromotionalCodeButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "giftcard.fill")
+        // между контентом
+        configuration.imagePadding = 20
+        configuration.imagePlacement = .leading
+        configuration.titleAlignment = .trailing
+        configuration.baseBackgroundColor = .tertiarySystemBackground
+        configuration.attributedTitle = AttributedString("Ввести промокод", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
+        configuration.buttonSize = .large
+        configuration.contentInsets = .init(top: 10, leading: 0, bottom: 10, trailing: 140)
+        configuration.cornerStyle = .large
+        let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
+          //debugPrint("Tapped One Button!")
+        }))
+        button.frame = CGRect(x: 15, y: 800, width: 350, height: 70)
+        return button
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -224,6 +260,11 @@ class ProfileUIView: UIView {
         addSubview(plusDeyliButton)
         plusDeyliButton.addSubview(plusDailyLabel)
         plusDeyliButton.addSubview(imageView)
+        addSubview(toInviteFriendButton)
+        toInviteFriendButton.addSubview(getPointsLabel)
+        toInviteFriendButton.addSubview(imageViewPoints)
+        addSubview(nterPromotionalCodeButton)
+        
         backgroundColor = .systemBackground
     }
     
