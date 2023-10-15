@@ -11,29 +11,21 @@ import UIKit
 
 class ProfileUIView: UIView {
     
-    let containerView: UIView = {
+    
+    
+    let containerNameView: UIView = {
         let container = UIView()
-        container.frame = CGRect(x: 10, y: 0, width: 380, height: 350)
+        container.frame = CGRect(x: 0, y: 0, width: 395, height: 320)
         container.backgroundColor = .tertiarySystemBackground
-        container.layer.cornerRadius = 10
+        container.layer.cornerRadius = 20
         return container
     }()
-    
-    let containerView2: UIView = {
-        let container = UIView()
-        container.frame = CGRect(x: 10, y: 390, width: 380, height: 650)
-        container.backgroundColor = .tertiarySystemBackground
-        container.layer.cornerRadius = 10
-        return container
-    }()
-    
-  
     
     private let myImageAvat: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person")
         imageView.contentMode = .center
-        imageView.frame = CGRect(x: 145, y: 50, width: 80, height: 80)
+        imageView.frame = CGRect(x: 145, y: 30, width: 80, height: 80)
         imageView.layer.cornerRadius = 40
         imageView.layer.masksToBounds = true
         let borderColor = UIColor(red: 230/255, green: 135/255, blue: 100/255, alpha: 1)
@@ -45,7 +37,7 @@ class ProfileUIView: UIView {
     private let nameAvatarLabel: UILabel = {
         let nameAvatar = UILabel()
         nameAvatar.text = "Гринько Николай"
-        nameAvatar.frame = CGRect(x: 110, y: 140, width: 180, height: 20)
+        nameAvatar.frame = CGRect(x: 110, y: 120, width: 180, height: 20)
         nameAvatar.font = .boldSystemFont(ofSize: 18)
         nameAvatar.textColor = .white
         return nameAvatar
@@ -54,7 +46,7 @@ class ProfileUIView: UIView {
     private let nameUrlAvatarLabel: UILabel = {
         let nameAvatar = UILabel()
         nameAvatar.text = "grinkonikolka@yandex.ru"
-        nameAvatar.frame = CGRect(x: 110, y: 160, width: 180, height: 20)
+        nameAvatar.frame = CGRect(x: 110, y: 140, width: 180, height: 20)
         nameAvatar.font = .boldSystemFont(ofSize: 12)
         nameAvatar.textColor = .lightGray
         return nameAvatar
@@ -68,45 +60,18 @@ class ProfileUIView: UIView {
         
         configuration.imagePlacement = .leading
         configuration.titleAlignment = .trailing
-        configuration.baseBackgroundColor = .systemGray6
+        configuration.baseBackgroundColor = .tertiarySystemBackground
         configuration.attributedTitle = AttributedString("Дети  12+", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
         configuration.buttonSize = .large
-        configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 100)
+        configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 105)
         configuration.cornerStyle = .large
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
           //debugPrint("Tapped One Button!")
         }))
-        button.frame = CGRect(x: 20, y: 220, width: 220, height: 50)
+        button.frame = CGRect(x: 10, y: 200, width: 220, height: 50)
         return button
     }()
     
-//    private let imageBabyAvatar: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "baby")
-//        imageView.contentMode = .center
-//        imageView.frame = CGRect(x: 20, y: 220, width: 40, height: 40)
-//        imageView.layer.cornerRadius = 20
-//        imageView.layer.masksToBounds = true
-//        return imageView
-//    }()
-//    
-//    private let nameBabyLabel: UILabel = {
-//        let nameAvatar = UILabel()
-//        nameAvatar.text = "Дети"
-//        nameAvatar.frame = CGRect(x: 80, y: 220, width: 50, height: 20)
-//        nameAvatar.font = .boldSystemFont(ofSize: 18)
-//        nameAvatar.textColor = .white
-//        return nameAvatar
-//    }()
-//    
-//    private let nameAgeLabel: UILabel = {
-//        let nameAvatar = UILabel()
-//        nameAvatar.text = "12+"
-//        nameAvatar.frame = CGRect(x: 80, y: 240, width: 50, height: 20)
-//        nameAvatar.font = .boldSystemFont(ofSize: 14)
-//        nameAvatar.textColor = .systemGray
-//        return nameAvatar
-//    }()
     
     private let oneButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -121,7 +86,7 @@ class ProfileUIView: UIView {
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
             //debugPrint("Tapped One Button!")
         }))
-        button.frame = CGRect(x: 250, y: 220, width: 120, height: 35)
+        button.frame = CGRect(x: 250, y: 200, width: 120, height: 35)
         return button
     }()
     
@@ -132,7 +97,7 @@ class ProfileUIView: UIView {
         configuration.imagePadding = 10
         configuration.imagePlacement = .leading
         configuration.titleAlignment = .leading
-        configuration.baseBackgroundColor = .systemGray6
+        configuration.baseBackgroundColor = .tertiarySystemBackground
         configuration.attributedTitle = AttributedString("Редактировать", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
         configuration.buttonSize = .large
         configuration.contentInsets = .init(top: 5, leading: -5, bottom: 5, trailing: 55)
@@ -140,26 +105,125 @@ class ProfileUIView: UIView {
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
           //debugPrint("Tapped One Button!")
         }))
-        button.frame = CGRect(x: 10, y: 270, width: 250, height: 60)
+        button.frame = CGRect(x: 10, y: 250, width: 250, height: 60)
         return button
     }()
     
+    private let namePlusLabel: UILabel = {
+        let nameAvatar = UILabel()
+        nameAvatar.text = "Вы в Плюсе"
+        nameAvatar.frame = CGRect(x: 15, y: 360, width: 180, height: 20)
+        nameAvatar.font = .boldSystemFont(ofSize: 25)
+        nameAvatar.textColor = .white
+        return nameAvatar
+    }()
+    
+//    let containerYouPlus: UIView = {
+//        let container = UIView()
+//        container.frame = CGRect(x: 15, y: 400, width: 350, height: 120)
+//        container.backgroundColor = .tertiarySystemBackground
+//        container.layer.cornerRadius = 20
+//        return container
+//    }()
+    
+    private let youPlusButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "chevron.right")
+        // между контентом
+        configuration.imagePadding = 5
+        configuration.imagePlacement = .trailing
+        configuration.titleAlignment = .leading
+        configuration.baseBackgroundColor = .tertiarySystemBackground
+        configuration.attributedTitle = AttributedString("Управлять", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
+        configuration.buttonSize = .medium
+        configuration.contentInsets = .init(top: 80, leading: 15, bottom: 5, trailing: 230)
+        configuration.cornerStyle = .medium
+        let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
+          //debugPrint("Tapped One Button!")
+        }))
+        button.frame = CGRect(x: 15, y: 400, width: 350, height: 120)
+        return button
+    }()
+    
+    private let plusAktiveLabel: UILabel = {
+        let nameAvatar = UILabel()
+        nameAvatar.text = "Плюс активен"
+        nameAvatar.frame = CGRect(x: 15, y: 10, width: 140, height: 20)
+        nameAvatar.font = .boldSystemFont(ofSize: 20)
+        nameAvatar.textColor = .white
+        return nameAvatar
+    }()
+    
+    private let plusDeyliButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "chevron.right")
+        // между контентом
+        configuration.imagePadding = 5
+        configuration.imagePlacement = .trailing
+        configuration.titleAlignment = .leading
+        configuration.baseBackgroundColor = .tertiarySystemBackground
+        configuration.attributedTitle = AttributedString("Вас ждут подарки", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
+        configuration.buttonSize = .medium
+        configuration.contentInsets = .init(top: 80, leading: 15, bottom: 5, trailing: 165)
+        configuration.cornerStyle = .medium
+        let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
+          //debugPrint("Tapped One Button!")
+        }))
+        button.frame = CGRect(x: 15, y: 530, width: 350, height: 120)
+        return button
+    }()
+    
+    private let plusDailyLabel: UILabel = {
+        let nameAvatar = UILabel()
+        nameAvatar.text = "Плюс Дейли"
+        nameAvatar.frame = CGRect(x: 15, y: 10, width: 120, height: 20)
+        nameAvatar.font = .boldSystemFont(ofSize: 20)
+        nameAvatar.textColor = .white
+        return nameAvatar
+    }()
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "present")
+        imageView.frame = CGRect(x: 240, y: 10, width: 100, height: 110)
+        return imageView
+    }()
+    
+    private let ToInviteFriendButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "chevron.right")
+        // между контентом
+        configuration.imagePadding = 5
+        configuration.imagePlacement = .trailing
+        configuration.titleAlignment = .leading
+        configuration.baseBackgroundColor = .tertiarySystemBackground
+        configuration.attributedTitle = AttributedString("Пригласить друга", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
+        configuration.buttonSize = .medium
+        configuration.contentInsets = .init(top: 80, leading: 15, bottom: 5, trailing: 165)
+        configuration.cornerStyle = .medium
+        let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
+          //debugPrint("Tapped One Button!")
+        }))
+        button.frame = CGRect(x: 15, y: 530, width: 350, height: 120)
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(containerView)
-        containerView.addSubview(myImageAvat)
-        containerView.addSubview(nameAvatarLabel)
-        containerView.addSubview(nameUrlAvatarLabel)
-        
-//        containerView.addSubview(imageBabyAvatar)
-//        containerView.addSubview(nameBabyLabel)
-//        containerView.addSubview(nameAgeLabel)
-        containerView.addSubview(oneButton)
-        containerView.addSubview(settingButton)
-        addSubview(containerView2)
-        containerView.addSubview(babyButton)
+        addSubview(containerNameView)
+        containerNameView.addSubview(myImageAvat)
+        containerNameView.addSubview(nameAvatarLabel)
+        containerNameView.addSubview(nameUrlAvatarLabel)
+        containerNameView.addSubview(oneButton)
+        containerNameView.addSubview(settingButton)
+        containerNameView.addSubview(babyButton)
+        addSubview(namePlusLabel)
+        addSubview(youPlusButton)
+        youPlusButton.addSubview(plusAktiveLabel)
+        addSubview(plusDeyliButton)
+        plusDeyliButton.addSubview(plusDailyLabel)
+        plusDeyliButton.addSubview(imageView)
         backgroundColor = .systemBackground
     }
     
