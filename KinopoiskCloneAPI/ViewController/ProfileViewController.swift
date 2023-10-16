@@ -54,14 +54,27 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private let myImageAvat: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
-        imageView.contentMode = .center
-        imageView.frame = CGRect(x: 145, y: 30, width: 80, height: 80)
-        imageView.layer.cornerRadius = 40
+        imageView.image = UIImage(named: "user3")
+        imageView.contentMode = .scaleAspectFill
+        imageView.frame = CGRect(x: 33, y: 32, width: 76, height: 76)
+        imageView.layer.cornerRadius = 38
         imageView.layer.masksToBounds = true
-        let borderColor = UIColor(red: 230/255, green: 135/255, blue: 100/255, alpha: 1)
-        imageView.layer.borderColor = borderColor.cgColor
-        imageView.layer.borderWidth = 5
+        let borderColor = UIColor(red: 23/255, green: 13/255, blue: 10/255, alpha: 1)
+        imageView.layer.backgroundColor = borderColor.cgColor
+        //imageView.layer.borderWidth = 5
+        return imageView
+    }()
+    
+    private let myImageGradient: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "gradient")
+        //imageView.contentMode = .center
+        imageView.frame = CGRect(x: 120, y: 0, width: 140, height: 140)
+        imageView.layer.cornerRadius = 70
+        imageView.layer.masksToBounds = true
+        //let borderColor = UIColor(red: 230/255, green: 135/255, blue: 100/255, alpha: 1)
+        //imageView.layer.borderColor = borderColor.cgColor
+        //imageView.layer.borderWidth = 5
         return imageView
     }()
     
@@ -282,17 +295,30 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return button
     }()
     
-    private let cancelButton: UIButton = {
+    private lazy var cancelButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBackground
         button.setTitle("Выйти из аккаунта", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.frame = CGRect(x: 100, y: 1100, width: 200, height: 40)
-        //button.addTarget(self, action: #selector(checkTransition), for: .touchUpInside)
+        button.addTarget(self, action: #selector(checkTransition), for: .touchUpInside)
         return button
     }()
     
+    @objc private func checkTransition() {
+        print("Выйти из аккаунта")
+        let alert = UIAlertController(title: nil, message: "Вы уверены, что хотите выйти?", preferredStyle: .actionSheet)
+        let camBth = UIAlertAction(title: "Выйти", style: .destructive, handler: nil)
+       
+        
+        let cancel = UIAlertAction(title: "Остаться", style: .cancel, handler: nil)
+        
+        alert.addAction(camBth)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -312,7 +338,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         
         scrollView.addSubview(containerNameView)
-        containerNameView.addSubview(myImageAvat)
+        //containerNameView.addSubview(myImageAvat)
+        containerNameView.addSubview(myImageGradient)
+        
+        myImageGradient.addSubview(myImageAvat)
         containerNameView.addSubview(nameAvatarLabel)
         containerNameView.addSubview(nameUrlAvatarLabel)
         containerNameView.addSubview(oneButton)
