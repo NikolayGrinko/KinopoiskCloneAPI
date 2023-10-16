@@ -32,6 +32,7 @@
 		207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E42AD719E400EDAD11 /* MyMoviesViewController.swift */; };
 		207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */; };
 		207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E82AD7331500EDAD11 /* MediaViewController.swift */; };
+		20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		207BE7E42AD719E400EDAD11 /* MyMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoviesViewController.swift; sourceTree = "<group>"; };
 		207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		207BE7E82AD7331500EDAD11 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				207BE7AB2AD4970800EDAD11 /* HeroHeaderUIView.swift */,
 				207BE7AD2AD4975000EDAD11 /* TitleCollectionViewCell.swift */,
 				207BE7BE2AD49C1000EDAD11 /* TitleTableViewCell.swift */,
+				20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				202D55962AD3545000D2C312 /* AppDelegate.swift in Sources */,
 				202D55982AD3545000D2C312 /* SceneDelegate.swift in Sources */,
 				207BE7BF2AD49C1000EDAD11 /* TitleTableViewCell.swift in Sources */,
+				20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */,
 				207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */,
 				207BE7B32AD4980800EDAD11 /* TitleViewModel.swift in Sources */,
 				207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */,
