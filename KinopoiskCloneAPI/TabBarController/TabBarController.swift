@@ -25,7 +25,8 @@ class TabBarController: UITabBarController {
         vc3.tabBarItem.image = UIImage(systemName: "bookmark")
         vc4.tabBarItem.image = UIImage(systemName: "magnifyingglass")
         vc5.tabBarItem.image = UIImage(systemName: "person.crop.circle")
-//        
+        
+//
 //        vc1.tabBarItem.image = UIImage(named: "home")
 //        vc2.tabBarItem.image = UIImage(named: "media")
 //        vc3.tabBarItem.image = UIImage(named: "moye")
@@ -39,9 +40,9 @@ class TabBarController: UITabBarController {
         vc5.title = "Профиль"
         
      
-        tabBar.unselectedItemTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)
         
-        tabBar.tintColor = #colorLiteral(red: 1, green: 0.8280770183, blue: 0, alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 0.7374973893, green: 0.3040031195, blue: 0, alpha: 1)
 
         setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
             
@@ -66,5 +67,6 @@ class TabBarController: UITabBarController {
     }
     
 }
+
 
 

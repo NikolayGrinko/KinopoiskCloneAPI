@@ -33,6 +33,12 @@
 		207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */; };
 		207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E82AD7331500EDAD11 /* MediaViewController.swift */; };
 		20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */; };
+		20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */; };
+		20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */; };
+		20ECFE052ADD553000ABF934 /* AboutTheApplicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE042ADD553000ABF934 /* AboutTheApplicationVC.swift */; };
+		20ECFE072ADE4EB900ABF934 /* TTNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE062ADE4EB900ABF934 /* TTNavigationBar.swift */; };
+		20ECFE0C2AE1B73500ABF934 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE0B2AE1B73500ABF934 /* SettingTableViewCell.swift */; };
+		20ECFE0E2AE1B75E00ABF934 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE0D2AE1B75E00ABF934 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,12 @@
 		207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		207BE7E82AD7331500EDAD11 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileTableViewCell.swift; sourceTree = "<group>"; };
+		20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNextProfileVC.swift; sourceTree = "<group>"; };
+		20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithSupportVC.swift; sourceTree = "<group>"; };
+		20ECFE042ADD553000ABF934 /* AboutTheApplicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTheApplicationVC.swift; sourceTree = "<group>"; };
+		20ECFE062ADE4EB900ABF934 /* TTNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNavigationBar.swift; sourceTree = "<group>"; };
+		20ECFE0B2AE1B73500ABF934 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		20ECFE0D2AE1B75E00ABF934 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,7 @@
 				207BE7A52AD495A400EDAD11 /* Views */,
 				202D55CD2AD357D800D2C312 /* Application */,
 				202D55CC2AD357B900D2C312 /* TabBarController */,
+				20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */,
 				202D55CB2AD3579C00D2C312 /* ViewController */,
 				202D559E2AD3545200D2C312 /* Assets.xcassets */,
 				202D55A02AD3545200D2C312 /* LaunchScreen.storyboard */,
@@ -127,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				202D55C92AD3575900D2C312 /* TabBarController.swift */,
+				20ECFE062ADE4EB900ABF934 /* TTNavigationBar.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -188,6 +202,26 @@
 				207B618A2AD955A70092827D /* add.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				20ECFE0A2AE1B70200ABF934 /* SettinTableview */,
+				20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */,
+				20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */,
+				20ECFE042ADD553000ABF934 /* AboutTheApplicationVC.swift */,
+			);
+			path = SettingNextProfileVC;
+			sourceTree = "<group>";
+		};
+		20ECFE0A2AE1B70200ABF934 /* SettinTableview */ = {
+			isa = PBXGroup;
+			children = (
+				20ECFE0B2AE1B73500ABF934 /* SettingTableViewCell.swift */,
+				20ECFE0D2AE1B75E00ABF934 /* SwitchTableViewCell.swift */,
+			);
+			path = SettinTableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +302,10 @@
 			files = (
 				207BE7B52AD4984300EDAD11 /* TitlePreviewViewModel.swift in Sources */,
 				207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */,
+				20ECFE0C2AE1B73500ABF934 /* SettingTableViewCell.swift in Sources */,
 				207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */,
 				202D55D12AD3589900D2C312 /* SearchViewController.swift in Sources */,
+				20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */,
 				207BE7AC2AD4970800EDAD11 /* HeroHeaderUIView.swift in Sources */,
 				207BE7B72AD4986C00EDAD11 /* YoutubeSearchResponse.swift in Sources */,
 				207BE7AA2AD496CA00EDAD11 /* Title.swift in Sources */,
@@ -283,9 +319,13 @@
 				207BE7B12AD497AD00EDAD11 /* TitlePreviewViewController.swift in Sources */,
 				202D55962AD3545000D2C312 /* AppDelegate.swift in Sources */,
 				202D55982AD3545000D2C312 /* SceneDelegate.swift in Sources */,
+				20ECFE0E2AE1B75E00ABF934 /* SwitchTableViewCell.swift in Sources */,
 				207BE7BF2AD49C1000EDAD11 /* TitleTableViewCell.swift in Sources */,
+				20ECFE052ADD553000ABF934 /* AboutTheApplicationVC.swift in Sources */,
+				20ECFE072ADE4EB900ABF934 /* TTNavigationBar.swift in Sources */,
 				20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */,
 				207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */,
+				20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */,
 				207BE7B32AD4980800EDAD11 /* TitleViewModel.swift in Sources */,
 				207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */,
 				207B618B2AD955A70092827D /* add.swift in Sources */,

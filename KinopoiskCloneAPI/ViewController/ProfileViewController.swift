@@ -8,22 +8,33 @@
 import UIKit
 
 struct Section {
+    //let title1: String
     let options: [SettingOptionsType]
 }
 
 enum SettingOptionsType {
     case staticCell(model: SettingOptions)
+   // case switchCell(model: SettingSwitchOptions)
+}
+
+struct SettingSwitchOptions {
+    //let title: String
+    //let titleMinText: String
+    let handler: (() -> Void)
+    let isOn: Bool
 }
 
 struct SettingOptions {
     let title: String
-//    let icon: UIImage?
-//    let iconBackgroundColor: UIColor
+    //let titleTrailing: String
     let handler: (() -> Void)
 }
 
+
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
+    
+    
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(SettingProfileTableViewCell.self, forCellReuseIdentifier: SettingProfileTableViewCell.identifier)
@@ -322,16 +333,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
         
        
+        
+        navigationController?.navigationBar.isTranslucent = false
+       
         let scrollView = UIScrollView(frame: view.bounds)
-        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 1200)
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 1250)
         contentView.frame = scrollView.bounds
         view.addSubview(scrollView)
         //scrollView.addSubview(contentView)
         //scrollView.addSubview(profileUIView)
-        configure()
+        configureProf()
         scrollView.addSubview(tableView)
         tableView.frame = CGRect(x: 15, y: 900, width: 350, height: 210)
         tableView.delegate = self
@@ -364,11 +378,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
   
     
-    func configure() {
+    func configureProf() {
 
         models.append(Section(options: [
             .staticCell(model: SettingOptions(title: "Настройки") {
                 print("Tapped Настройки")
+                let settingVC = SettingNextProfileVC()
+                //settingVC.title = "Настройки Профиля"
+                settingVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(settingVC, animated: true)
             }),
             .staticCell(model: SettingOptions(title: "Чат с поддержкой") {
                 print("Tapped Чат с поддержкой")
@@ -413,4 +431,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 }
+
+
 

@@ -36,6 +36,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isTranslucent = false
         //title = "Главное"
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTable)
