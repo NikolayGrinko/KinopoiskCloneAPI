@@ -14,8 +14,16 @@ struct SectionNew {
 }
 
 enum SettingOptionsNew {
+    case staticButton(model: SettingButton)
     case staticCell(model: SettingOptionsNext)
     case switchCell(model: SettingSwitchOptionsNext)
+}
+
+struct SettingButton {
+    let button1: UIButton
+    let button2: UIButton
+    let button3: UIButton
+    let handler: (() -> Void)
 }
 
 struct SettingSwitchOptionsNext {
@@ -33,17 +41,18 @@ struct SettingOptionsNext {
 
 class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
-  
+    var button = UIButton()
+    var models = [SectionNew]()
+    
     
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
         table.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
         table.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        table.register(ButtonTableViewSetting.self, forCellReuseIdentifier: ButtonTableViewSetting.identifier)
         return table
     }()
     
-    
-    var models = [SectionNew]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +114,7 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
         ]))
         
         models.append(SectionNew(titleOne: "Тема оформления", options2: [
-            .staticCell(model: SettingOptionsNext(title2: "ТЕМЫ ПОМЕНЯТЬ", titleTrailingSetting: "") {
+            .staticButton(model: SettingButton(button1: button, button2: button, button3: button) {
             }),
            
         ]))
@@ -131,6 +140,7 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             }, isOn: true)),
         ]))
     }
+    
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -168,9 +178,17 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             }
             cell.configure(with: model)
             return cell
+        case .staticButton(model: let model):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewSetting.identifier, for: indexPath) as? ButtonTableViewSetting else {
+                return UITableViewCell()
         }
-
+            cell.configure(with: model)
+            return cell
+        
+        }
+        
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
       

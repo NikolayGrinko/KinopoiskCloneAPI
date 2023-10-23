@@ -15,6 +15,7 @@
 		202D55CA2AD3575900D2C312 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D55C92AD3575900D2C312 /* TabBarController.swift */; };
 		202D55D12AD3589900D2C312 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D55D02AD3589900D2C312 /* SearchViewController.swift */; };
 		202D55D62AD3608100D2C312 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 202D55D52AD3608100D2C312 /* SDWebImage */; };
+		205FEFC82AE6806700F129B8 /* ButtonTableViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFC72AE6806700F129B8 /* ButtonTableViewSetting.swift */; };
 		207B618B2AD955A70092827D /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618A2AD955A70092827D /* add.swift */; };
 		207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618C2ADA8A8A0092827D /* ProfileUIView.swift */; };
 		207BE7A72AD495C900EDAD11 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		202D55A32AD3545200D2C312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202D55C92AD3575900D2C312 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		202D55D02AD3589900D2C312 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		205FEFC72AE6806700F129B8 /* ButtonTableViewSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewSetting.swift; sourceTree = "<group>"; };
 		207B618A2AD955A70092827D /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		207B618C2ADA8A8A0092827D /* ProfileUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIView.swift; sourceTree = "<group>"; };
 		207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				20ECFE0B2AE1B73500ABF934 /* SettingTableViewCell.swift */,
 				20ECFE0D2AE1B75E00ABF934 /* SwitchTableViewCell.swift */,
+				205FEFC72AE6806700F129B8 /* ButtonTableViewSetting.swift */,
 			);
 			path = SettinTableview;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */,
 				207BE7AC2AD4970800EDAD11 /* HeroHeaderUIView.swift in Sources */,
 				207BE7B72AD4986C00EDAD11 /* YoutubeSearchResponse.swift in Sources */,
+				205FEFC82AE6806700F129B8 /* ButtonTableViewSetting.swift in Sources */,
 				207BE7AA2AD496CA00EDAD11 /* Title.swift in Sources */,
 				202D55CA2AD3575900D2C312 /* TabBarController.swift in Sources */,
 				207BE7A72AD495C900EDAD11 /* CollectionViewTableViewCell.swift in Sources */,
