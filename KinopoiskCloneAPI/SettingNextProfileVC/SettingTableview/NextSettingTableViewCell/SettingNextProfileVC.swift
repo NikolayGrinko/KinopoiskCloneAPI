@@ -53,13 +53,9 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
         return table
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let scrollView = UIScrollView(frame: view.bounds)
-//        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 2000)
-//        view.addSubview(scrollView)
-//        scrollView.addSubview(tableView)
+
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.isTranslucent = false
@@ -67,17 +63,14 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
         navigationItem.title = "Загрузки"
         
         configureSetting()
-        //title = "Загрузки"
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
-        
-        
-        
-        
+    
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        
     }
     func configureSetting() {
         
@@ -85,9 +78,8 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             .switchCell(model: SettingSwitchOptionsNext(title: "Загружать только по WI-Fi", titleMinText: "", handler: {
             }, isOn: true)),
                
-    
                 .staticCell(model: SettingOptionsNext(title2: "Качество видео", titleTrailingSetting: "Оптимальное") {
-                print("Tapped first cell")
+                    
             }),
            
                 .switchCell(model: SettingSwitchOptionsNext(title: "Не блокировать экран", titleMinText: "Во время загрузки экран не будет блокироваться, чтобы скачивание не прервалось", handler: {
@@ -128,6 +120,7 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             .switchCell(model: SettingSwitchOptionsNext(title: "Определять автоматически", titleMinText: "", handler: {
             }, isOn: true)),
             .staticCell(model: SettingOptionsNext(title2: "Рязань", titleTrailingSetting: "") {
+
             }),
         ]))
         

@@ -14,7 +14,7 @@ class ButtonTableViewSetting: UITableViewCell {
     static let identifier = "ButtonTableViewSetting"
     
     
-    private var stackOneButton: UIButton = {
+    private lazy var stackOneButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         // configuration.image = UIImage(systemName: "arrow.forward.circle.fill")
         // между контентом
@@ -31,9 +31,15 @@ class ButtonTableViewSetting: UITableViewCell {
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
         }))
         // светлая - sun.max , месяц - moon.fill
+      
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tapButton1), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tapButton1() {
+        print("Button1")
+    }
     
     private var stackTwoButton: UIButton = {
         var configuration = UIButton.Configuration.filled()

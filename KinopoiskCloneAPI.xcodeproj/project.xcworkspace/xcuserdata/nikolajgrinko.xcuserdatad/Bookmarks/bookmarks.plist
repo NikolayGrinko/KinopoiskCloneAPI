@@ -32,6 +32,25 @@
 			<key>type</key>
 			<string>group</string>
 		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>KinopoiskCloneAPI/SettingNextProfileVC/SettingAboutTheApplication/AboutTheApplicationVC/NextAboutTheApplication/ViewingConditionsAboutVC.swift</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>DVTDocumentLocation</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
 	</array>
 </dict>
 </plist>

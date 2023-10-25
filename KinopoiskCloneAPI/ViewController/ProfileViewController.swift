@@ -43,8 +43,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     var models = [Section]()
-    
-    //let profileUIView = ProfileUIView()
  
     let contentView: UIView = {
         let contentView = UIView()
@@ -179,13 +177,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return nameAvatar
     }()
     
-//    let containerYouPlus: UIView = {
-//        let container = UIView()
-//        container.frame = CGRect(x: 15, y: 400, width: 350, height: 120)
-//        container.backgroundColor = .tertiarySystemBackground
-//        container.layer.cornerRadius = 20
-//        return container
-//    }()
     
     private lazy var youPlusButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -335,8 +326,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
         
-       
-        
         navigationController?.navigationBar.isTranslucent = false
        
         let scrollView = UIScrollView(frame: view.bounds)
@@ -390,8 +379,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }),
             .staticCell(model: SettingOptions(title: "Чат с поддержкой") {
                 print("Tapped Чат с поддержкой")
+                let chatVC = ChatWithSupportVC()
+                chatVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(chatVC, animated: true)
             }),
             .staticCell(model: SettingOptions(title: "О приложении") {
+                let aboutVC = AboutTheApplicationVC()
+                aboutVC.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(aboutVC, animated: true)
                 print("Tapped О приложении")
             }),
 
