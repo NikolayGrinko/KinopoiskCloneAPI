@@ -26,6 +26,7 @@
 		205FEFE12AE81B5400F129B8 /* ReferenceAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE02AE81B5400F129B8 /* ReferenceAboutVC.swift */; };
 		205FEFE32AE81B9400F129B8 /* LikeApplicationAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE22AE81B9400F129B8 /* LikeApplicationAboutVC.swift */; };
 		205FEFE52AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE42AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift */; };
+		205FEFE92AE95D3E00F129B8 /* BanTapSettingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */; };
 		207B618B2AD955A70092827D /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618A2AD955A70092827D /* add.swift */; };
 		207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618C2ADA8A8A0092827D /* ProfileUIView.swift */; };
 		207BE7A72AD495C900EDAD11 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		205FEFE02AE81B5400F129B8 /* ReferenceAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceAboutVC.swift; sourceTree = "<group>"; };
 		205FEFE22AE81B9400F129B8 /* LikeApplicationAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeApplicationAboutVC.swift; sourceTree = "<group>"; };
 		205FEFE42AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomMyFriendsAboutVC.swift; sourceTree = "<group>"; };
+		205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanTapSettingProfile.swift; sourceTree = "<group>"; };
 		207B618A2AD955A70092827D /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		207B618C2ADA8A8A0092827D /* ProfileUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIView.swift; sourceTree = "<group>"; };
 		207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,7 +138,7 @@
 				207BE7A52AD495A400EDAD11 /* Views */,
 				202D55CD2AD357D800D2C312 /* Application */,
 				202D55CC2AD357B900D2C312 /* TabBarController */,
-				20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */,
+				205FEFE62AE95C3C00F129B8 /* SettingProfile */,
 				202D55CB2AD3579C00D2C312 /* ViewController */,
 				202D559E2AD3545200D2C312 /* Assets.xcassets */,
 				202D55A02AD3545200D2C312 /* LaunchScreen.storyboard */,
@@ -233,6 +235,23 @@
 				205FEFE42AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift */,
 			);
 			path = NextAboutTheApplication;
+			sourceTree = "<group>";
+		};
+		205FEFE62AE95C3C00F129B8 /* SettingProfile */ = {
+			isa = PBXGroup;
+			children = (
+				205FEFE72AE95CC900F129B8 /* BasicProfileSettings */,
+				20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */,
+			);
+			path = SettingProfile;
+			sourceTree = "<group>";
+		};
+		205FEFE72AE95CC900F129B8 /* BasicProfileSettings */ = {
+			isa = PBXGroup;
+			children = (
+				205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */,
+			);
+			path = BasicProfileSettings;
 			sourceTree = "<group>";
 		};
 		207BE7A52AD495A400EDAD11 /* Views */ = {
@@ -383,6 +402,7 @@
 			files = (
 				205FEFCB2AE70C1500F129B8 /* NextSettingTapTableview.swift in Sources */,
 				207BE7B52AD4984300EDAD11 /* TitlePreviewViewModel.swift in Sources */,
+				205FEFE92AE95D3E00F129B8 /* BanTapSettingProfile.swift in Sources */,
 				205FEFD62AE7E0C100F129B8 /* AboutSettingProfileTableView.swift in Sources */,
 				207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */,
 				20ECFE0C2AE1B73500ABF934 /* SettingTableViewCell.swift in Sources */,

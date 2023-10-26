@@ -81,9 +81,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         imageView.frame = CGRect(x: 120, y: 0, width: 140, height: 140)
         imageView.layer.cornerRadius = 70
         imageView.layer.masksToBounds = true
-        //let borderColor = UIColor(red: 230/255, green: 135/255, blue: 100/255, alpha: 1)
-        //imageView.layer.borderColor = borderColor.cgColor
-        //imageView.layer.borderWidth = 5
         return imageView
     }()
     
@@ -137,9 +134,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 10)
         configuration.cornerStyle = .capsule
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
-            //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 250, y: 200, width: 120, height: 35)
+        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         return button
     }()
@@ -147,6 +144,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
    
       @objc private func tapButton() {
           print("Запретить")
+          
+          //MARK: Modal VC
+          let vc = BanTapSettingProfile()
+          present(vc, animated: true)
+          
+          //MARK: Next VC
+//          let banTapVC = BanTapSettingProfile()
+//          banTapVC.modalPresentationStyle = .fullScreen
+//          self.navigationController?.pushViewController(banTapVC, animated: true)
       }
     
     private let settingButton: UIButton = {
