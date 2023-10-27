@@ -102,7 +102,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return nameAvatar
     }()
     
-    private let babyButton: UIButton = {
+    lazy var babyButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(named: "baby")
         // между контентом
@@ -119,9 +119,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 10, y: 200, width: 220, height: 50)
+        button.addTarget(self, action: #selector(tapRateBabyButton), for: .touchUpInside)
         return button
     }()
     
+    @objc private func tapRateBabyButton() {
+        let window = SceneDelegate.window
+        window?.rootViewController = TabBarBabyProfile()
+        window?.makeKeyAndVisible()
+//        let tabBarVC =  TabBarBabyProfile()
+//        tabBarVC.modalPresentationStyle = .fullScreen
+//        self.navigationController?.pushViewController(tabBarVC, animated: true)
+    }
     
     private lazy var oneButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -137,7 +146,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }))
         button.frame = CGRect(x: 250, y: 200, width: 120, height: 35)
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
-        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
+     
         return button
     }()
 
@@ -155,7 +164,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 //          self.navigationController?.pushViewController(banTapVC, animated: true)
       }
     
-    private let settingButton: UIButton = {
+    lazy var settingButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(named: "setting")
         // между контентом
@@ -171,8 +180,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 10, y: 250, width: 250, height: 60)
+        button.addTarget(self, action: #selector(tapNextSetting), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func tapNextSetting() {
+        let vc = SettingProfileManagement()
+        present(vc, animated: true)
+    }
     
     private let namePlusLabel: UILabel = {
         let nameAvatar = UILabel()
@@ -200,10 +215,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 15, y: 400, width: 350, height: 120)
-        
+        button.addTarget(self, action: #selector(tapYouPlusButton), for: .touchUpInside)
         return button
     }()
     
+    @objc private func tapYouPlusButton() {
+        let youPlusVC =  YouPlusSettProf()
+        youPlusVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(youPlusVC, animated: true)
+    }
+    
+    
+//
     
     private let plusAktiveLabel: UILabel = {
         let nameAvatar = UILabel()
@@ -214,7 +237,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return nameAvatar
     }()
     
-    private let plusDeyliButton: UIButton = {
+    lazy var plusDeyliButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(systemName: "chevron.right")
         // между контентом
@@ -230,9 +253,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 15, y: 530, width: 350, height: 120)
+        button.addTarget(self, action: #selector(plusDeyliSetting), for: .touchUpInside)
         return button
     }()
     
+    @objc private func plusDeyliSetting() {
+        let plusDeyliVC = PlusDeyliSetProf()
+        present(plusDeyliVC, animated: true)
+    }
+    
+    //
     private let plusDailyLabel: UILabel = {
         let nameAvatar = UILabel()
         nameAvatar.text = "Плюс Дейли"
@@ -249,7 +279,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return imageView
     }()
     
-    private let toInviteFriendButton: UIButton = {
+    lazy var toInviteFriendButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(systemName: "chevron.right")
         // между контентом
@@ -265,9 +295,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 15, y: 660, width: 350, height: 120)
+        button.addTarget(self, action: #selector(GetPointsSeyProf), for: .touchUpInside)
         return button
     }()
     
+    @objc private func GetPointsSeyProf() {
+        let getPointVC = PlusDeyliSetProf()
+        present(getPointVC, animated: true)
+    }
+    
+    //
     private let getPointsLabel: UILabel = {
         let nameAvatar = UILabel()
         nameAvatar.text = "Получить 300 баллов"
@@ -284,7 +321,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return imageView
     }()
     
-    private let enterPromotionalCodeButton: UIButton = {
+    lazy var enterPromotionalCodeButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.image = UIImage(systemName: "giftcard.fill")
         // между контентом
@@ -300,8 +337,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
           //debugPrint("Tapped One Button!")
         }))
         button.frame = CGRect(x: 15, y: 800, width: 350, height: 70)
+        button.addTarget(self, action: #selector(enterPromotionCodeButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func enterPromotionCodeButton() {
+        let enterCodeVC =  EnterPromotionalCodeVC()
+        enterCodeVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(enterCodeVC, animated: true)
+    }
     
     private lazy var cancelButton: UIButton = {
         let button = UIButton()

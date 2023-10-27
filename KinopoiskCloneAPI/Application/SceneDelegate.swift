@@ -9,15 +9,16 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+   static var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        window?.rootViewController = TabBarController()
-        window?.makeKeyAndVisible()
+        SceneDelegate.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        SceneDelegate.window?.windowScene = windowScene
+        //window?.rootViewController = TabBarBabyProfile()
+        SceneDelegate.window?.rootViewController = TabBarController()
+        SceneDelegate.window?.makeKeyAndVisible()
         let vc = TabBarController()
         //MARK: color TabBar
         //vc.tabBar.tintColor = #colorLiteral(red: 1, green: 0.8280770183, blue: 0, alpha: 1)

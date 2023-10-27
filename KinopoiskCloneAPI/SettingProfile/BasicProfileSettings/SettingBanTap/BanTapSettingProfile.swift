@@ -11,6 +11,7 @@ import UIKit
 
 class BanTapSettingProfile: UIViewController {
     
+    private var galleryCollectionView = GalleryCollectionView()
     
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -49,7 +50,7 @@ class BanTapSettingProfile: UIViewController {
         return label
     }()
     
-    private let cancellationButton: UIButton = {
+    lazy var cancellationButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         // между контентом
         configuration.imagePadding = 10
@@ -61,12 +62,17 @@ class BanTapSettingProfile: UIViewController {
         configuration.cornerStyle = .capsule
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
           //debugPrint("Tapped One Button!")
+            
         }))
+        button.addTarget(self, action: #selector(tapCancellation), for: .touchUpInside)
         return button
     }()
     
+    @objc private func tapCancellation() {
+        dismissAlert()
+    }
     
-    private let readyButton: UIButton = {
+    lazy var readyButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.titleAlignment = .center
         configuration.baseBackgroundColor = .orange
@@ -77,8 +83,14 @@ class BanTapSettingProfile: UIViewController {
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
           //debugPrint("Tapped One Button!")
         }))
+        button.addTarget(self, action: #selector(tapReady), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func tapReady() {
+        dismissAlert()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(closeButton)
@@ -88,9 +100,12 @@ class BanTapSettingProfile: UIViewController {
         view.addSubview(explainLabel1)
         view.addSubview(cancellationButton)
         view.addSubview(readyButton)
+        view.addSubview(galleryCollectionView)
         
         navigationItem.title = "Запретить"
         view.backgroundColor = .white
+        galleryCollectionView.set(cells: ModelBaby.finishWatching())
+        
         constraints()
     }
     
@@ -117,6 +132,7 @@ class BanTapSettingProfile: UIViewController {
         explainLabel1.translatesAutoresizingMaskIntoConstraints = false
         cancellationButton.translatesAutoresizingMaskIntoConstraints = false
         readyButton.translatesAutoresizingMaskIntoConstraints = false
+        galleryCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
         
@@ -157,6 +173,14 @@ class BanTapSettingProfile: UIViewController {
             readyButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             readyButton.heightAnchor.constraint(equalToConstant: 50),
             readyButton.widthAnchor.constraint(equalToConstant: 360),
+            
+            
+            galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            galleryCollectionView.topAnchor.constraint(equalTo: explainLabel1.bottomAnchor, constant: 30),
+            galleryCollectionView.heightAnchor.constraint(equalToConstant: 200)
+            
+            
         ])
     }
     

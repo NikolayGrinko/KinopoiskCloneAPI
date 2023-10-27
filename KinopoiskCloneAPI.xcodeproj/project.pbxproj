@@ -44,6 +44,22 @@
 		207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E42AD719E400EDAD11 /* MyMoviesViewController.swift */; };
 		207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */; };
 		207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7E82AD7331500EDAD11 /* MediaViewController.swift */; };
+		2083E27E2AEA6ADC0058B91A /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E27D2AEA6ADC0058B91A /* GalleryCollectionView.swift */; };
+		2083E2802AEA6B000058B91A /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E27F2AEA6B000058B91A /* GalleryCollectionViewCell.swift */; };
+		2083E2822AEA6B170058B91A /* ModelBaby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2812AEA6B170058B91A /* ModelBaby.swift */; };
+		2083E2862AEA7CE60058B91A /* SettingProfileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2852AEA7CE60058B91A /* SettingProfileManagement.swift */; };
+		2083E2882AEAA3BC0058B91A /* SettingBabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2872AEAA3BC0058B91A /* SettingBabyProfile.swift */; };
+		2083E28B2AEBA2D90058B91A /* SettingBabyProf12+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E28A2AEBA2D90058B91A /* SettingBabyProf12+.swift */; };
+		2083E28E2AEBA50D0058B91A /* YouPlusSettProf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E28D2AEBA50D0058B91A /* YouPlusSettProf.swift */; };
+		2083E2912AEBA6700058B91A /* PlusDeyliSetProf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2902AEBA6700058B91A /* PlusDeyliSetProf.swift */; };
+		2083E2942AEBA8240058B91A /* GetPointsSeyProf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2932AEBA8240058B91A /* GetPointsSeyProf.swift */; };
+		2083E2972AEBABB70058B91A /* EnterPromotionalCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2962AEBABB70058B91A /* EnterPromotionalCodeVC.swift */; };
+		2083E29B2AEBAD6A0058B91A /* TabBarBabyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E29A2AEBAD6A0058B91A /* TabBarBabyProfile.swift */; };
+		2083E29D2AEBADD10058B91A /* HomeBabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E29C2AEBADD10058B91A /* HomeBabyController.swift */; };
+		2083E29F2AEBADFA0058B91A /* MyMoviesBabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E29E2AEBADFA0058B91A /* MyMoviesBabyController.swift */; };
+		2083E2A12AEBAE100058B91A /* MySearchBabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A02AEBAE100058B91A /* MySearchBabyController.swift */; };
+		2083E2A32AEBAE2D0058B91A /* Profile12BabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A22AEBAE2C0058B91A /* Profile12BabyController.swift */; };
+		2083E2A62AEBBBBB0058B91A /* BabySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */; };
 		20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */; };
 		20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */; };
 		20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */; };
@@ -92,6 +108,22 @@
 		207BE7E42AD719E400EDAD11 /* MyMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoviesViewController.swift; sourceTree = "<group>"; };
 		207BE7E62AD71ED000EDAD11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		207BE7E82AD7331500EDAD11 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		2083E27D2AEA6ADC0058B91A /* GalleryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		2083E27F2AEA6B000058B91A /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2083E2812AEA6B170058B91A /* ModelBaby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBaby.swift; sourceTree = "<group>"; };
+		2083E2852AEA7CE60058B91A /* SettingProfileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileManagement.swift; sourceTree = "<group>"; };
+		2083E2872AEAA3BC0058B91A /* SettingBabyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBabyProfile.swift; sourceTree = "<group>"; };
+		2083E28A2AEBA2D90058B91A /* SettingBabyProf12+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingBabyProf12+.swift"; sourceTree = "<group>"; };
+		2083E28D2AEBA50D0058B91A /* YouPlusSettProf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouPlusSettProf.swift; sourceTree = "<group>"; };
+		2083E2902AEBA6700058B91A /* PlusDeyliSetProf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusDeyliSetProf.swift; sourceTree = "<group>"; };
+		2083E2932AEBA8240058B91A /* GetPointsSeyProf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPointsSeyProf.swift; sourceTree = "<group>"; };
+		2083E2962AEBABB70058B91A /* EnterPromotionalCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPromotionalCodeVC.swift; sourceTree = "<group>"; };
+		2083E29A2AEBAD6A0058B91A /* TabBarBabyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBabyProfile.swift; sourceTree = "<group>"; };
+		2083E29C2AEBADD10058B91A /* HomeBabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBabyController.swift; sourceTree = "<group>"; };
+		2083E29E2AEBADFA0058B91A /* MyMoviesBabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoviesBabyController.swift; sourceTree = "<group>"; };
+		2083E2A02AEBAE100058B91A /* MySearchBabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchBabyController.swift; sourceTree = "<group>"; };
+		2083E2A22AEBAE2C0058B91A /* Profile12BabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile12BabyController.swift; sourceTree = "<group>"; };
+		2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySearchTableViewCell.swift; sourceTree = "<group>"; };
 		20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileTableViewCell.swift; sourceTree = "<group>"; };
 		20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNextProfileVC.swift; sourceTree = "<group>"; };
 		20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithSupportVC.swift; sourceTree = "<group>"; };
@@ -137,6 +169,7 @@
 				207BE7A82AD496B400EDAD11 /* Model */,
 				207BE7A52AD495A400EDAD11 /* Views */,
 				202D55CD2AD357D800D2C312 /* Application */,
+				2083E2982AEBACDA0058B91A /* TabBarBabyProfileController */,
 				202D55CC2AD357B900D2C312 /* TabBarController */,
 				205FEFE62AE95C3C00F129B8 /* SettingProfile */,
 				202D55CB2AD3579C00D2C312 /* ViewController */,
@@ -150,6 +183,7 @@
 		202D55CB2AD3579C00D2C312 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2083E2992AEBAD2D0058B91A /* BabyProfileControllers */,
 				207BE7AF2AD4979C00EDAD11 /* General */,
 				202D55992AD3545000D2C312 /* HomeViewController.swift */,
 				207BE7E82AD7331500EDAD11 /* MediaViewController.swift */,
@@ -249,7 +283,13 @@
 		205FEFE72AE95CC900F129B8 /* BasicProfileSettings */ = {
 			isa = PBXGroup;
 			children = (
-				205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */,
+				2083E2892AEBA2900058B91A /* SettingBabyProfile12+ */,
+				2083E2842AEA7A9E0058B91A /* SettingEditProfileManagement */,
+				2083E2832AEA7A2C0058B91A /* SettingBanTap */,
+				2083E28C2AEBA4CB0058B91A /* YouPlusProf */,
+				2083E28F2AEBA6330058B91A /* PlusDeyliSetProf */,
+				2083E2922AEBA7E90058B91A /* GetPointsSeyProf */,
+				2083E2952AEBAB6C0058B91A /* EnterPromotionalCode */,
 			);
 			path = BasicProfileSettings;
 			sourceTree = "<group>";
@@ -304,6 +344,94 @@
 				207B618A2AD955A70092827D /* add.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		2083E2832AEA7A2C0058B91A /* SettingBanTap */ = {
+			isa = PBXGroup;
+			children = (
+				205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */,
+				2083E27D2AEA6ADC0058B91A /* GalleryCollectionView.swift */,
+				2083E27F2AEA6B000058B91A /* GalleryCollectionViewCell.swift */,
+				2083E2812AEA6B170058B91A /* ModelBaby.swift */,
+			);
+			path = SettingBanTap;
+			sourceTree = "<group>";
+		};
+		2083E2842AEA7A9E0058B91A /* SettingEditProfileManagement */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2852AEA7CE60058B91A /* SettingProfileManagement.swift */,
+				2083E2872AEAA3BC0058B91A /* SettingBabyProfile.swift */,
+			);
+			path = SettingEditProfileManagement;
+			sourceTree = "<group>";
+		};
+		2083E2892AEBA2900058B91A /* SettingBabyProfile12+ */ = {
+			isa = PBXGroup;
+			children = (
+				2083E28A2AEBA2D90058B91A /* SettingBabyProf12+.swift */,
+			);
+			path = "SettingBabyProfile12+";
+			sourceTree = "<group>";
+		};
+		2083E28C2AEBA4CB0058B91A /* YouPlusProf */ = {
+			isa = PBXGroup;
+			children = (
+				2083E28D2AEBA50D0058B91A /* YouPlusSettProf.swift */,
+			);
+			path = YouPlusProf;
+			sourceTree = "<group>";
+		};
+		2083E28F2AEBA6330058B91A /* PlusDeyliSetProf */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2902AEBA6700058B91A /* PlusDeyliSetProf.swift */,
+			);
+			path = PlusDeyliSetProf;
+			sourceTree = "<group>";
+		};
+		2083E2922AEBA7E90058B91A /* GetPointsSeyProf */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2932AEBA8240058B91A /* GetPointsSeyProf.swift */,
+			);
+			path = GetPointsSeyProf;
+			sourceTree = "<group>";
+		};
+		2083E2952AEBAB6C0058B91A /* EnterPromotionalCode */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2962AEBABB70058B91A /* EnterPromotionalCodeVC.swift */,
+			);
+			path = EnterPromotionalCode;
+			sourceTree = "<group>";
+		};
+		2083E2982AEBACDA0058B91A /* TabBarBabyProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				2083E29A2AEBAD6A0058B91A /* TabBarBabyProfile.swift */,
+			);
+			path = TabBarBabyProfileController;
+			sourceTree = "<group>";
+		};
+		2083E2992AEBAD2D0058B91A /* BabyProfileControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2A42AEBBB8E0058B91A /* BabySearchTableViewCell */,
+				2083E29C2AEBADD10058B91A /* HomeBabyController.swift */,
+				2083E29E2AEBADFA0058B91A /* MyMoviesBabyController.swift */,
+				2083E2A02AEBAE100058B91A /* MySearchBabyController.swift */,
+				2083E2A22AEBAE2C0058B91A /* Profile12BabyController.swift */,
+			);
+			path = BabyProfileControllers;
+			sourceTree = "<group>";
+		};
+		2083E2A42AEBBB8E0058B91A /* BabySearchTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */,
+			);
+			path = BabySearchTableViewCell;
 			sourceTree = "<group>";
 		};
 		20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */ = {
@@ -408,10 +536,14 @@
 				20ECFE0C2AE1B73500ABF934 /* SettingTableViewCell.swift in Sources */,
 				207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */,
 				202D55D12AD3589900D2C312 /* SearchViewController.swift in Sources */,
+				2083E29F2AEBADFA0058B91A /* MyMoviesBabyController.swift in Sources */,
 				205FEFDB2AE81A4F00F129B8 /* ReccomendeAboutVC.swift in Sources */,
+				2083E29B2AEBAD6A0058B91A /* TabBarBabyProfile.swift in Sources */,
 				205FEFE12AE81B5400F129B8 /* ReferenceAboutVC.swift in Sources */,
+				2083E2A32AEBAE2D0058B91A /* Profile12BabyController.swift in Sources */,
 				205FEFE52AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift in Sources */,
 				20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */,
+				2083E2882AEAA3BC0058B91A /* SettingBabyProfile.swift in Sources */,
 				207BE7AC2AD4970800EDAD11 /* HeroHeaderUIView.swift in Sources */,
 				207BE7B72AD4986C00EDAD11 /* YoutubeSearchResponse.swift in Sources */,
 				205FEFC82AE6806700F129B8 /* ButtonTableViewSetting.swift in Sources */,
@@ -421,26 +553,38 @@
 				207BE7BA2AD4994B00EDAD11 /* Extension.swift in Sources */,
 				205FEFDD2AE81A8B00F129B8 /* ViewingConditionsAboutVC.swift in Sources */,
 				207BE7AE2AD4975000EDAD11 /* TitleCollectionViewCell.swift in Sources */,
+				2083E27E2AEA6ADC0058B91A /* GalleryCollectionView.swift in Sources */,
 				207BE7BD2AD4999B00EDAD11 /* DataPersistenceManager.swift in Sources */,
+				2083E2942AEBA8240058B91A /* GetPointsSeyProf.swift in Sources */,
+				2083E28E2AEBA50D0058B91A /* YouPlusSettProf.swift in Sources */,
 				202D559A2AD3545000D2C312 /* HomeViewController.swift in Sources */,
 				207BE7C12AD49CAC00EDAD11 /* SearchResultsViewController.swift in Sources */,
+				2083E28B2AEBA2D90058B91A /* SettingBabyProf12+.swift in Sources */,
 				207BE7B12AD497AD00EDAD11 /* TitlePreviewViewController.swift in Sources */,
 				205FEFE32AE81B9400F129B8 /* LikeApplicationAboutVC.swift in Sources */,
 				202D55962AD3545000D2C312 /* AppDelegate.swift in Sources */,
+				2083E2862AEA7CE60058B91A /* SettingProfileManagement.swift in Sources */,
 				205FEFD92AE81A3400F129B8 /* LicenzeAboutVC.swift in Sources */,
 				205FEFD42AE7153E00F129B8 /* SettingNextTableView.swift in Sources */,
 				202D55982AD3545000D2C312 /* SceneDelegate.swift in Sources */,
 				20ECFE0E2AE1B75E00ABF934 /* SwitchTableViewCell.swift in Sources */,
 				207BE7BF2AD49C1000EDAD11 /* TitleTableViewCell.swift in Sources */,
+				2083E2A62AEBBBBB0058B91A /* BabySearchTableViewCell.swift in Sources */,
 				20ECFE052ADD553000ABF934 /* AboutTheApplicationVC.swift in Sources */,
 				20ECFE072ADE4EB900ABF934 /* TTNavigationBar.swift in Sources */,
 				20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */,
+				2083E2912AEBA6700058B91A /* PlusDeyliSetProf.swift in Sources */,
+				2083E2822AEA6B170058B91A /* ModelBaby.swift in Sources */,
 				207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */,
 				20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */,
 				207BE7B32AD4980800EDAD11 /* TitleViewModel.swift in Sources */,
 				205FEFDF2AE81B2200F129B8 /* PoliticConfidentialAboutVc.swift in Sources */,
+				2083E2972AEBABB70058B91A /* EnterPromotionalCodeVC.swift in Sources */,
 				207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */,
+				2083E2802AEA6B000058B91A /* GalleryCollectionViewCell.swift in Sources */,
 				207B618B2AD955A70092827D /* add.swift in Sources */,
+				2083E29D2AEBADD10058B91A /* HomeBabyController.swift in Sources */,
+				2083E2A12AEBAE100058B91A /* MySearchBabyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
