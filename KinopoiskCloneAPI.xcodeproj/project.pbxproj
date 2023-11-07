@@ -60,6 +60,12 @@
 		2083E2A12AEBAE100058B91A /* MySearchBabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A02AEBAE100058B91A /* MySearchBabyController.swift */; };
 		2083E2A32AEBAE2D0058B91A /* Profile12BabyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A22AEBAE2C0058B91A /* Profile12BabyController.swift */; };
 		2083E2A62AEBBBBB0058B91A /* BabySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */; };
+		20C97F272AF15D6000EE5232 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F262AF15D6000EE5232 /* StoryCell.swift */; };
+		20C97F5A2AFAE66800EE5232 /* ModelDataSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F592AFAE66800EE5232 /* ModelDataSearch.swift */; };
+		20C97F5C2AFAE68E00EE5232 /* HeaderSuplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F5B2AFAE68E00EE5232 /* HeaderSuplementaryView.swift */; };
+		20C97F5E2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F5D2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift */; };
+		20C97F602AFAE6C300EE5232 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F5F2AFAE6C300EE5232 /* CategoryCollectionViewCell.swift */; };
+		20C97F622AFAE6E300EE5232 /* SaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F612AFAE6E300EE5232 /* SaleCollectionViewCell.swift */; };
 		20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */; };
 		20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */; };
 		20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */; };
@@ -124,6 +130,12 @@
 		2083E2A02AEBAE100058B91A /* MySearchBabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchBabyController.swift; sourceTree = "<group>"; };
 		2083E2A22AEBAE2C0058B91A /* Profile12BabyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile12BabyController.swift; sourceTree = "<group>"; };
 		2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySearchTableViewCell.swift; sourceTree = "<group>"; };
+		20C97F262AF15D6000EE5232 /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		20C97F592AFAE66800EE5232 /* ModelDataSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSearch.swift; sourceTree = "<group>"; };
+		20C97F5B2AFAE68E00EE5232 /* HeaderSuplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSuplementaryView.swift; sourceTree = "<group>"; };
+		20C97F5D2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C97F5F2AFAE6C300EE5232 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C97F612AFAE6E300EE5232 /* SaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileTableViewCell.swift; sourceTree = "<group>"; };
 		20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNextProfileVC.swift; sourceTree = "<group>"; };
 		20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithSupportVC.swift; sourceTree = "<group>"; };
@@ -183,6 +195,7 @@
 		202D55CB2AD3579C00D2C312 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				20C97F582AFAE3F000EE5232 /* SearchSettingVC */,
 				2083E2992AEBAD2D0058B91A /* BabyProfileControllers */,
 				207BE7AF2AD4979C00EDAD11 /* General */,
 				202D55992AD3545000D2C312 /* HomeViewController.swift */,
@@ -315,6 +328,7 @@
 				207BE7B22AD4980800EDAD11 /* TitleViewModel.swift */,
 				207BE7B42AD4984300EDAD11 /* TitlePreviewViewModel.swift */,
 				207BE7B62AD4986C00EDAD11 /* YoutubeSearchResponse.swift */,
+				20C97F592AFAE66800EE5232 /* ModelDataSearch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +339,7 @@
 				207BE7B02AD497AD00EDAD11 /* TitlePreviewViewController.swift */,
 				207BE7C02AD49CAC00EDAD11 /* SearchResultsViewController.swift */,
 				207B618C2ADA8A8A0092827D /* ProfileUIView.swift */,
+				20C97F262AF15D6000EE5232 /* StoryCell.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -432,6 +447,17 @@
 				2083E2A52AEBBBBB0058B91A /* BabySearchTableViewCell.swift */,
 			);
 			path = BabySearchTableViewCell;
+			sourceTree = "<group>";
+		};
+		20C97F582AFAE3F000EE5232 /* SearchSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				20C97F612AFAE6E300EE5232 /* SaleCollectionViewCell.swift */,
+				20C97F5F2AFAE6C300EE5232 /* CategoryCollectionViewCell.swift */,
+				20C97F5B2AFAE68E00EE5232 /* HeaderSuplementaryView.swift */,
+				20C97F5D2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift */,
+			);
+			path = SearchSettingVC;
 			sourceTree = "<group>";
 		};
 		20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */ = {
@@ -545,6 +571,7 @@
 				20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */,
 				2083E2882AEAA3BC0058B91A /* SettingBabyProfile.swift in Sources */,
 				207BE7AC2AD4970800EDAD11 /* HeroHeaderUIView.swift in Sources */,
+				20C97F622AFAE6E300EE5232 /* SaleCollectionViewCell.swift in Sources */,
 				207BE7B72AD4986C00EDAD11 /* YoutubeSearchResponse.swift in Sources */,
 				205FEFC82AE6806700F129B8 /* ButtonTableViewSetting.swift in Sources */,
 				207BE7AA2AD496CA00EDAD11 /* Title.swift in Sources */,
@@ -559,10 +586,12 @@
 				2083E28E2AEBA50D0058B91A /* YouPlusSettProf.swift in Sources */,
 				202D559A2AD3545000D2C312 /* HomeViewController.swift in Sources */,
 				207BE7C12AD49CAC00EDAD11 /* SearchResultsViewController.swift in Sources */,
+				20C97F272AF15D6000EE5232 /* StoryCell.swift in Sources */,
 				2083E28B2AEBA2D90058B91A /* SettingBabyProf12+.swift in Sources */,
 				207BE7B12AD497AD00EDAD11 /* TitlePreviewViewController.swift in Sources */,
 				205FEFE32AE81B9400F129B8 /* LikeApplicationAboutVC.swift in Sources */,
 				202D55962AD3545000D2C312 /* AppDelegate.swift in Sources */,
+				20C97F5C2AFAE68E00EE5232 /* HeaderSuplementaryView.swift in Sources */,
 				2083E2862AEA7CE60058B91A /* SettingProfileManagement.swift in Sources */,
 				205FEFD92AE81A3400F129B8 /* LicenzeAboutVC.swift in Sources */,
 				205FEFD42AE7153E00F129B8 /* SettingNextTableView.swift in Sources */,
@@ -574,6 +603,7 @@
 				20ECFE072ADE4EB900ABF934 /* TTNavigationBar.swift in Sources */,
 				20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */,
 				2083E2912AEBA6700058B91A /* PlusDeyliSetProf.swift in Sources */,
+				20C97F602AFAE6C300EE5232 /* CategoryCollectionViewCell.swift in Sources */,
 				2083E2822AEA6B170058B91A /* ModelBaby.swift in Sources */,
 				207BE7E72AD71ED000EDAD11 /* ProfileViewController.swift in Sources */,
 				20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */,
@@ -582,6 +612,8 @@
 				2083E2972AEBABB70058B91A /* EnterPromotionalCodeVC.swift in Sources */,
 				207BE7E52AD719E400EDAD11 /* MyMoviesViewController.swift in Sources */,
 				2083E2802AEA6B000058B91A /* GalleryCollectionViewCell.swift in Sources */,
+				20C97F5E2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift in Sources */,
+				20C97F5A2AFAE66800EE5232 /* ModelDataSearch.swift in Sources */,
 				207B618B2AD955A70092827D /* add.swift in Sources */,
 				2083E29D2AEBADD10058B91A /* HomeBabyController.swift in Sources */,
 				2083E2A12AEBAE100058B91A /* MySearchBabyController.swift in Sources */,

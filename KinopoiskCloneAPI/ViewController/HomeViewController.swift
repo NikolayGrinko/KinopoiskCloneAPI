@@ -13,17 +13,40 @@ enum Sections: Int {
     case TrendingTv = 1
     case Popular = 2
     case Uncoming = 3
-   
-    
 }
 
-class HomeViewController: UIViewController {
 
+class HomeViewController: UIViewController, UICollectionViewDelegate {
+
+    var cells = [ModelBabyNew]()
+    
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
     let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Uncoming Movies"]
+    
+    
+    private lazy var layout: UICollectionViewLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 8
+        layout.scrollDirection = .horizontal
+        return layout
+    }()
+
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(StoryCell.self, forCellWithReuseIdentifier: "StoryCellID")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "DefaultCellID")
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+
+    
     
 
     private let homeFeedTable: UITableView = {
@@ -36,24 +59,46 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
+     
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.backgroundColor = .systemBackground
         navigationController?.navigationBar.isTranslucent = false
         //title = "Главное"
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTable)
         
+        self.setupview()
+        
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        configureNavBar()
+//configureNavBar()
         
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: -50, width: view.bounds.width, height: 600))
         homeFeedTable.tableHeaderView = headerView
+        
      
         configureHeroHeaderView()
     }
     
    
+    private func setupview() {
+        self.view.backgroundColor = .white
+        self.view.addSubview(self.collectionView)
+
+        NSLayoutConstraint.activate([
+            self.collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+
+            self.collectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+
+            self.collectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+
+            self.collectionView.heightAnchor.constraint(equalToConstant: 60),
+
+        ])
+    }
     
     private func configureHeroHeaderView() {
         
@@ -76,19 +121,21 @@ class HomeViewController: UIViewController {
         var image = UIImage(named: "kinopoisk")
         image = image?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-       
-//        navigationItem.leftBarButtonItems = [
-//            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
-//            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
-       // ]
         navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+       
+      
         homeFeedTable.frame = view.bounds
     }
-        
+       
+    func set(cells: [ModelBabyNew]) {
+        self.cells = cells
+    }
+    
     }
 
 
@@ -222,5 +269,40 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
         }
     }
 }
+
+
+
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+       // cells.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCellID", for: indexPath) as? StoryCell
+                
+        else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultCellID", for: indexPath)
+            //cell.nameLabel.text = cells[indexPath.row].babyTextLabel2
+        }
+            //cell.setup()
+            return cell
+        }
+    }
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 80, height: 40)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+
+}
+
 
 

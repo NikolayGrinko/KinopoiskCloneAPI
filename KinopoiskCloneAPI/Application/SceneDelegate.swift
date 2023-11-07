@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
    static var window: UIWindow?
+    
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -18,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         SceneDelegate.window?.windowScene = windowScene
         //window?.rootViewController = TabBarBabyProfile()
         SceneDelegate.window?.rootViewController = TabBarController()
+        
         SceneDelegate.window?.makeKeyAndVisible()
         let vc = TabBarController()
         //MARK: color TabBar
