@@ -67,7 +67,7 @@ class Profile12BabyController: UIViewController {
     
     @objc private func tapNextProfile() {
         
-        var window = SceneDelegate.window
+        let window = SceneDelegate.window
         window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
         

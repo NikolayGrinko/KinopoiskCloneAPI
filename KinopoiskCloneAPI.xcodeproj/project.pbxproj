@@ -70,6 +70,12 @@
 		20C97F672AFC4AFF00EE5232 /* TwoCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F662AFC4AFF00EE5232 /* TwoCategoryCollectionViewCell.swift */; };
 		20C97F692AFC4B1B00EE5232 /* ThreeExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F682AFC4B1B00EE5232 /* ThreeExampleCollectionViewCell.swift */; };
 		20C97F6D2AFC4B5900EE5232 /* ModelMyMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F6C2AFC4B5900EE5232 /* ModelMyMovies.swift */; };
+		20C97F7D2AFDA05000EE5232 /* ModelDataMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F7C2AFDA05000EE5232 /* ModelDataMedia.swift */; };
+		20C97F7F2AFDA46800EE5232 /* SalessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F7E2AFDA46800EE5232 /* SalessCollectionViewCell.swift */; };
+		20C97F812AFDA48400EE5232 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F802AFDA48400EE5232 /* MediaCollectionViewCell.swift */; };
+		20C97F832AFDA49D00EE5232 /* ExclusiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F822AFDA49D00EE5232 /* ExclusiveCollectionViewCell.swift */; };
+		20C97F852AFDA4C000EE5232 /* CreateGraphikSectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F842AFDA4C000EE5232 /* CreateGraphikSectionCollectionView.swift */; };
+		20C97F872AFDA4D700EE5232 /* TrailerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C97F862AFDA4D700EE5232 /* TrailerCollectionView.swift */; };
 		20ECFDDB2ADC824A00ABF934 /* SettingProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */; };
 		20ECFE012ADD543C00ABF934 /* SettingNextProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */; };
 		20ECFE032ADD54C400ABF934 /* ChatWithSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */; };
@@ -144,6 +150,12 @@
 		20C97F662AFC4AFF00EE5232 /* TwoCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		20C97F682AFC4B1B00EE5232 /* ThreeExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeExampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		20C97F6C2AFC4B5900EE5232 /* ModelMyMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMyMovies.swift; sourceTree = "<group>"; };
+		20C97F7C2AFDA05000EE5232 /* ModelDataMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataMedia.swift; sourceTree = "<group>"; };
+		20C97F7E2AFDA46800EE5232 /* SalessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalessCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C97F802AFDA48400EE5232 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C97F822AFDA49D00EE5232 /* ExclusiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		20C97F842AFDA4C000EE5232 /* CreateGraphikSectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGraphikSectionCollectionView.swift; sourceTree = "<group>"; };
+		20C97F862AFDA4D700EE5232 /* TrailerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCollectionView.swift; sourceTree = "<group>"; };
 		20ECFDDA2ADC824A00ABF934 /* SettingProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileTableViewCell.swift; sourceTree = "<group>"; };
 		20ECFE002ADD543C00ABF934 /* SettingNextProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNextProfileVC.swift; sourceTree = "<group>"; };
 		20ECFE022ADD54C400ABF934 /* ChatWithSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWithSupportVC.swift; sourceTree = "<group>"; };
@@ -203,6 +215,7 @@
 		202D55CB2AD3579C00D2C312 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				20C97F7B2AFDA02800EE5232 /* MyMediaVC */,
 				20C97F5B2AFAE68E00EE5232 /* HeaderSuplementaryView.swift */,
 				20C97F632AFC4AB100EE5232 /* MyMoviesVC */,
 				20C97F582AFAE3F000EE5232 /* SearchSettingVC */,
@@ -340,6 +353,7 @@
 				207BE7B62AD4986C00EDAD11 /* YoutubeSearchResponse.swift */,
 				20C97F592AFAE66800EE5232 /* ModelDataSearch.swift */,
 				20C97F6C2AFC4B5900EE5232 /* ModelMyMovies.swift */,
+				20C97F7C2AFDA05000EE5232 /* ModelDataMedia.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -480,6 +494,18 @@
 			path = MyMoviesVC;
 			sourceTree = "<group>";
 		};
+		20C97F7B2AFDA02800EE5232 /* MyMediaVC */ = {
+			isa = PBXGroup;
+			children = (
+				20C97F7E2AFDA46800EE5232 /* SalessCollectionViewCell.swift */,
+				20C97F802AFDA48400EE5232 /* MediaCollectionViewCell.swift */,
+				20C97F822AFDA49D00EE5232 /* ExclusiveCollectionViewCell.swift */,
+				20C97F842AFDA4C000EE5232 /* CreateGraphikSectionCollectionView.swift */,
+				20C97F862AFDA4D700EE5232 /* TrailerCollectionView.swift */,
+			);
+			path = MyMediaVC;
+			sourceTree = "<group>";
+		};
 		20ECFDFF2ADD53F600ABF934 /* SettingNextProfileVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205FEFCB2AE70C1500F129B8 /* NextSettingTapTableview.swift in Sources */,
+				20C97F852AFDA4C000EE5232 /* CreateGraphikSectionCollectionView.swift in Sources */,
 				207BE7B52AD4984300EDAD11 /* TitlePreviewViewModel.swift in Sources */,
 				205FEFE92AE95D3E00F129B8 /* BanTapSettingProfile.swift in Sources */,
 				205FEFD62AE7E0C100F129B8 /* AboutSettingProfileTableView.swift in Sources */,
@@ -600,6 +627,7 @@
 				207BE7BA2AD4994B00EDAD11 /* Extension.swift in Sources */,
 				205FEFDD2AE81A8B00F129B8 /* ViewingConditionsAboutVC.swift in Sources */,
 				207BE7AE2AD4975000EDAD11 /* TitleCollectionViewCell.swift in Sources */,
+				20C97F7D2AFDA05000EE5232 /* ModelDataMedia.swift in Sources */,
 				2083E27E2AEA6ADC0058B91A /* GalleryCollectionView.swift in Sources */,
 				207BE7BD2AD4999B00EDAD11 /* DataPersistenceManager.swift in Sources */,
 				2083E2942AEBA8240058B91A /* GetPointsSeyProf.swift in Sources */,
@@ -614,10 +642,12 @@
 				20C97F5C2AFAE68E00EE5232 /* HeaderSuplementaryView.swift in Sources */,
 				2083E2862AEA7CE60058B91A /* SettingProfileManagement.swift in Sources */,
 				205FEFD92AE81A3400F129B8 /* LicenzeAboutVC.swift in Sources */,
+				20C97F872AFDA4D700EE5232 /* TrailerCollectionView.swift in Sources */,
 				205FEFD42AE7153E00F129B8 /* SettingNextTableView.swift in Sources */,
 				202D55982AD3545000D2C312 /* SceneDelegate.swift in Sources */,
 				20ECFE0E2AE1B75E00ABF934 /* SwitchTableViewCell.swift in Sources */,
 				207BE7BF2AD49C1000EDAD11 /* TitleTableViewCell.swift in Sources */,
+				20C97F832AFDA49D00EE5232 /* ExclusiveCollectionViewCell.swift in Sources */,
 				2083E2A62AEBBBBB0058B91A /* BabySearchTableViewCell.swift in Sources */,
 				20ECFE052ADD553000ABF934 /* AboutTheApplicationVC.swift in Sources */,
 				20ECFE072ADE4EB900ABF934 /* TTNavigationBar.swift in Sources */,
@@ -638,9 +668,11 @@
 				20C97F5E2AFAE6A500EE5232 /* ExampleCollectionViewCell.swift in Sources */,
 				20C97F5A2AFAE66800EE5232 /* ModelDataSearch.swift in Sources */,
 				207B618B2AD955A70092827D /* add.swift in Sources */,
+				20C97F812AFDA48400EE5232 /* MediaCollectionViewCell.swift in Sources */,
 				2083E29D2AEBADD10058B91A /* HomeBabyController.swift in Sources */,
 				2083E2A12AEBAE100058B91A /* MySearchBabyController.swift in Sources */,
 				20C97F652AFC4AE600EE5232 /* OneCollectionViewCell.swift in Sources */,
+				20C97F7F2AFDA46800EE5232 /* SalessCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
