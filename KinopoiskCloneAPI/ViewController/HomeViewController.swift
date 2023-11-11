@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
-    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Uncoming Movies"]
+    let sectionTitles: [String] = ["Новинки", "Фильмы для вас", "Сериалы Топ-250 Кинопоиска", "Новинки подписки"]
     
     
     private lazy var layout: UICollectionViewLayout = {
@@ -79,7 +79,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: -50, width: view.bounds.width, height: 600))
         homeFeedTable.tableHeaderView = headerView
         
-     
         configureHeroHeaderView()
     }
     
