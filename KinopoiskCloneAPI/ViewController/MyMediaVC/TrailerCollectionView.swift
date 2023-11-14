@@ -20,7 +20,7 @@ class TrailerCollectionView : UICollectionViewCell {
     private let categoryLabel2: UILabel = {
         let label = UILabel()
         label.text = " "
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 17)
         label.textColor = .white

@@ -8,7 +8,7 @@
 import UIKit
 
 class HeroHeaderUIView: UIView {
-    
+
     
     private let oneButton: UIButton = {
         var configuration = UIButton.Configuration.filled()
@@ -23,7 +23,7 @@ class HeroHeaderUIView: UIView {
         configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 10)
         configuration.cornerStyle = .capsule
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
-            //debugPrint("Tapped One Button!")
+          //debugPrint("Tapped One Button!")
         }))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -43,7 +43,7 @@ class HeroHeaderUIView: UIView {
         configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 10)
         configuration.cornerStyle = .capsule
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
-            //debugPrint("Tapped One Button!")
+          //debugPrint("Tapped One Button!")
         }))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -62,7 +62,7 @@ class HeroHeaderUIView: UIView {
         configuration.contentInsets = .init(top: 5, leading: 10, bottom: 5, trailing: 10)
         configuration.cornerStyle = .capsule
         let button = UIButton(configuration: configuration, primaryAction: UIAction(handler: { action in
-            //debugPrint("Tapped One Button!")
+          //debugPrint("Tapped One Button!")
         }))
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -75,7 +75,7 @@ class HeroHeaderUIView: UIView {
         imageView.image = UIImage(named: "heroImage")
         return imageView
     }()
-    
+   
     private func addGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
@@ -99,31 +99,31 @@ class HeroHeaderUIView: UIView {
     
     private func  applyConstraints() {
         
-        
+
         
         let oneButtonConstraints = [
-            
+        
             oneButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
             oneButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
             oneButton.widthAnchor.constraint(equalToConstant: 150),
             oneButton.heightAnchor.constraint(equalToConstant: 50)
         ]
-        let twoButtonConstraints = [
-            
+                let twoButtonConstraints = [
+                    
             twoButton.leadingAnchor.constraint(equalTo: oneButton.trailingAnchor, constant: 20),
             twoButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
             twoButton.widthAnchor.constraint(equalToConstant: 50),
             twoButton.heightAnchor.constraint(equalToConstant: 50)
-            
-        ]
+        
+                ]
         
         let threeButtonConstraints = [
             
-            threeButton.leadingAnchor.constraint(equalTo: twoButton.trailingAnchor, constant: 20),
-            threeButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            threeButton.widthAnchor.constraint(equalToConstant: 50),
-            threeButton.heightAnchor.constraint(equalToConstant: 50)
-            
+    threeButton.leadingAnchor.constraint(equalTo: twoButton.trailingAnchor, constant: 20),
+    threeButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+    threeButton.widthAnchor.constraint(equalToConstant: 50),
+    threeButton.heightAnchor.constraint(equalToConstant: 50)
+
         ]
         
         NSLayoutConstraint.activate(oneButtonConstraints)
@@ -150,6 +150,6 @@ class HeroHeaderUIView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+
 }
 

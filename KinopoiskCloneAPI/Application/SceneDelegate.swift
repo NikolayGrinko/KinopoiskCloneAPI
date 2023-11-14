@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         SceneDelegate.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         SceneDelegate.window?.windowScene = windowScene
         //window?.rootViewController = TabBarBabyProfile()
-        SceneDelegate.window?.rootViewController = TabBarController()
+        SceneDelegate.window?.rootViewController = AnimeViewController()
         
         SceneDelegate.window?.makeKeyAndVisible()
         let vc = TabBarController()

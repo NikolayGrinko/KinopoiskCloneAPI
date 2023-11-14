@@ -18,36 +18,16 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController, UICollectionViewDelegate {
 
-    var cells = [ModelBabyNew]()
+    
+    private let horizontalMenuCollectionView = HorizontalMenuCollectionView()
     
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
-    let sectionTitles: [String] = ["Новинки", "Фильмы для вас", "Сериалы Топ-250 Кинопоиска", "Новинки подписки"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Uncoming Movies"]
     
-    
-    private lazy var layout: UICollectionViewLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 8
-        layout.scrollDirection = .horizontal
-        return layout
-    }()
 
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        collectionView.backgroundColor = .systemBackground
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(StoryCell.self, forCellWithReuseIdentifier: "StoryCellID")
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "DefaultCellID")
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }()
-
-    
-    
 
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -59,8 +39,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
      
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.backgroundColor = .systemBackground
@@ -69,34 +47,29 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTable)
         
-        self.setupview()
+        view.addSubview(horizontalMenuCollectionView)
+        horizontalMenuCollectionView.cellDelegate = self
         
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
 //configureNavBar()
         
+        
         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: -50, width: view.bounds.width, height: 600))
         homeFeedTable.tableHeaderView = headerView
         
+        setupViews()
+        setConatraints()
         configureHeroHeaderView()
     }
     
-   
-    private func setupview() {
-        self.view.backgroundColor = .white
-        self.view.addSubview(self.collectionView)
-
-        NSLayoutConstraint.activate([
-            self.collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-
-            self.collectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-
-            self.collectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-
-            self.collectionView.heightAnchor.constraint(equalToConstant: 60),
-
-        ])
+    private func setupViews() {
+        
+        view.backgroundColor = .systemBackground
+       // view.addSubview(mainImageView)
+        view.addSubview(horizontalMenuCollectionView)
+        horizontalMenuCollectionView.cellDelegate = self
     }
     
     private func configureHeroHeaderView() {
@@ -131,10 +104,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         homeFeedTable.frame = view.bounds
     }
        
-    func set(cells: [ModelBabyNew]) {
-        self.cells = cells
-    }
-    
     }
 
 
@@ -269,39 +238,40 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
     }
 }
 
-
-
-
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-       // cells.count
+extension HomeViewController: ISelectCollectionViewItemProtocol {
+    func selectItem(index: IndexPath) {
+        print(index)
+//        switch index.item {
+//        case 0: mainImageView.image = UIImage(named: "1")
+//        case 1: mainImageView.image = UIImage(named: "2")
+//        case 2: mainImageView.image = UIImage(named: "3")
+//        case 3: mainImageView.image = UIImage(named: "4")
+//        case 4: mainImageView.image = UIImage(named: "5")
+//        case 5: mainImageView.image = UIImage(named: "6")
+//        case 6: mainImageView.image = UIImage(named: "7")
+//
+//        default:
+//            mainImageView.image = UIImage(named: "car")
+//        }
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCellID", for: indexPath) as? StoryCell
-                
-        else {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultCellID", for: indexPath)
-            //cell.nameLabel.text = cells[indexPath.row].babyTextLabel2
-        }
-            //cell.setup()
-            return cell
-        }
-    }
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 80, height: 40)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    }
-
 }
+
+extension HomeViewController {
+    
+    private func setConatraints() {
+     
+        NSLayoutConstraint.activate([
+            
+            horizontalMenuCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            horizontalMenuCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            horizontalMenuCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            horizontalMenuCollectionView.heightAnchor.constraint(equalToConstant: 40),
+        
+        ])
+    }
+}
+
+
 
 
 
