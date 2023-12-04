@@ -14,8 +14,8 @@ class HorizontalMenuCollectionViewCell: UICollectionViewCell {
     let nameCategoryLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont(name: "Arial Bold", size: 18)
+        label.textColor = .systemGray
+        label.font = UIFont(name: "Times New Roman", size: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -23,8 +23,8 @@ class HorizontalMenuCollectionViewCell: UICollectionViewCell {
     // изменение цвета ячейки и цвета текста
     override var isSelected: Bool {
         didSet {
-            backgroundColor = self.isSelected ? .red : .systemGray4
-            nameCategoryLabel.textColor = self.isSelected ? .black : .white
+            backgroundColor = self.isSelected ? .systemBackground : .systemBackground
+            nameCategoryLabel.textColor = self.isSelected ? .white : .systemGray2
         }
     }
     
@@ -40,7 +40,7 @@ class HorizontalMenuCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-        backgroundColor = .systemGray4
+        backgroundColor = .systemBackground
         layer.cornerRadius = 10
         addSubview(nameCategoryLabel)
     }

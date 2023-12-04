@@ -94,7 +94,7 @@ class SearchViewController: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-        title = "FoodShop"
+       // title = "FoodShop"
         //view.addSubview(orderButton)
         view.addSubview(collectionView)
         

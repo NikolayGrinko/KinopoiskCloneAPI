@@ -16,7 +16,7 @@ class HorizontalMenuCollectionView: UICollectionView {
     
     private let categoryLayaut = UICollectionViewFlowLayout()
     
-    private let nameCategoryArray = ["Like", "And", "Subscribe", "cmb + B, cmd + R", "Dont lovw", "Channel", "Color Cell and", "CollectionViewLayout"]
+    private let nameCategoryArray = ["Мое кино", "Спорт", "Каналы", "Загрузить", "Подписки"]
     
     weak var cellDelegate: ISelectCollectionViewItemProtocol?
     

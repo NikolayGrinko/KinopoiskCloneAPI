@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
-    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Uncoming Movies"]
+    let sectionTitles: [String] = ["Top 250 movies", "Top series", "Popular movies", "Top acters"]
     
 
 
@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 //configureNavBar()
         
         
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: -50, width: view.bounds.width, height: 600))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 600))
         homeFeedTable.tableHeaderView = headerView
         
         setupViews()
@@ -125,68 +125,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.delegate = self
         
-        
-//        switch indexPath.section {
-//        case Sections.TrendingMovies.rawValue:
+        switch indexPath.section {
             
-//            APICaller.shared.getTrendingMovies { result in
-//                switch result {
-//                case .success(let titles):
-//                    cell.configure(with: titles)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-          //  }
+        case Sections.TrendingMovies.rawValue:
             
+            APICaller.shared.getTop250Movies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
             
-       // case Sections.TrendingTv.rawValue:
-            
-//            APICaller.shared.getTrendingTvs { result in
-//                switch result {
-//                case .success(let titles):
-//                    cell.configure(with: titles)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-       //     }
-            
-//        case Sections.Popular.rawValue:
-//            
-//            APICaller.shared.getPopular { result in
-//                switch result {
-//                case .success(let titles):
-//                    cell.configure(with: titles)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-            
-//        case Sections.Uncoming.rawValue:
-//            
-//            APICaller.shared.getUpcomingMovies { result in
-//                switch result {
-//                case .success(let titles):
-//                    cell.configure(with: titles)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-//            
-//        case Sections.TopRated.rawValue:
-//            
-//            APICaller.shared.getTopRated { result in
-//                switch result {
-//                case .success(let titles):
-//                    cell.configure(with: titles)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-//            
-//        default:
-//            return UITableViewCell()
-//        }
-//        
+   
+        default:
+            return UITableViewCell()
+        }
         return cell
     }
     // height sections
@@ -238,6 +193,7 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
     }
 }
 
+// реализация при нажатии на ячейку
 extension HomeViewController: ISelectCollectionViewItemProtocol {
     func selectItem(index: IndexPath) {
         print(index)

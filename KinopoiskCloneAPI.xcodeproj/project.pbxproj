@@ -27,6 +27,8 @@
 		205FEFE32AE81B9400F129B8 /* LikeApplicationAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE22AE81B9400F129B8 /* LikeApplicationAboutVC.swift */; };
 		205FEFE52AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE42AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift */; };
 		205FEFE92AE95D3E00F129B8 /* BanTapSettingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */; };
+		2066ABDE2B1CE87E00C6C251 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2066ABDD2B1CE87E00C6C251 /* APICaller.swift */; };
+		2066ABE12B1CE8AE00C6C251 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2066ABE02B1CE8AE00C6C251 /* SwiftyJSON */; };
 		207B618B2AD955A70092827D /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618A2AD955A70092827D /* add.swift */; };
 		207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207B618C2ADA8A8A0092827D /* ProfileUIView.swift */; };
 		207BE7A72AD495C900EDAD11 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */; };
@@ -109,6 +111,7 @@
 		205FEFE22AE81B9400F129B8 /* LikeApplicationAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeApplicationAboutVC.swift; sourceTree = "<group>"; };
 		205FEFE42AE81BBB00F129B8 /* RecomMyFriendsAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomMyFriendsAboutVC.swift; sourceTree = "<group>"; };
 		205FEFE82AE95D3E00F129B8 /* BanTapSettingProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanTapSettingProfile.swift; sourceTree = "<group>"; };
+		2066ABDD2B1CE87E00C6C251 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		207B618A2AD955A70092827D /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		207B618C2ADA8A8A0092827D /* ProfileUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIView.swift; sourceTree = "<group>"; };
 		207BE7A62AD495C900EDAD11 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2066ABE12B1CE8AE00C6C251 /* SwiftyJSON in Frameworks */,
 				202D55D62AD3608100D2C312 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +391,7 @@
 			children = (
 				207BE7BC2AD4999B00EDAD11 /* DataPersistenceManager.swift */,
 				207B618A2AD955A70092827D /* add.swift */,
+				2066ABDD2B1CE87E00C6C251 /* APICaller.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 			name = KinopoiskCloneAPI;
 			packageProductDependencies = (
 				202D55D52AD3608100D2C312 /* SDWebImage */,
+				2066ABE02B1CE8AE00C6C251 /* SwiftyJSON */,
 			);
 			productName = KinopoiskCloneAPI;
 			productReference = 202D55922AD3545000D2C312 /* KinopoiskCloneAPI.app */;
@@ -587,6 +593,7 @@
 			mainGroup = 202D55892AD3545000D2C312;
 			packageReferences = (
 				202D55D42AD3608100D2C312 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				2066ABDF2B1CE8AE00C6C251 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 202D55932AD3545000D2C312 /* Products */;
 			projectDirPath = "";
@@ -621,6 +628,7 @@
 				205FEFD62AE7E0C100F129B8 /* AboutSettingProfileTableView.swift in Sources */,
 				207BE7E92AD7331500EDAD11 /* MediaViewController.swift in Sources */,
 				20ECFE0C2AE1B73500ABF934 /* SettingTableViewCell.swift in Sources */,
+				2066ABDE2B1CE87E00C6C251 /* APICaller.swift in Sources */,
 				207B618D2ADA8A8A0092827D /* ProfileUIView.swift in Sources */,
 				202D55D12AD3589900D2C312 /* SearchViewController.swift in Sources */,
 				2083E29F2AEBADFA0058B91A /* MyMoviesBabyController.swift in Sources */,
@@ -911,6 +919,14 @@
 				minimumVersion = 5.18.2;
 			};
 		};
+		2066ABDF2B1CE8AE00C6C251 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -918,6 +934,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 202D55D42AD3608100D2C312 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		2066ABE02B1CE8AE00C6C251 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2066ABDF2B1CE8AE00C6C251 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
