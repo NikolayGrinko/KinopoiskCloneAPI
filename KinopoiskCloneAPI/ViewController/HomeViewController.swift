@@ -13,19 +13,34 @@ enum Sections: Int {
     case TrendingTv = 1
     case Popular = 2
     case Uncoming = 3
+    
+    var name: String {
+        switch self {
+        case .TrendingMovies:
+            return "Trending Movies"
+        case .TrendingTv:
+            return "Trending Tv"
+        case .Popular:
+            return"Popular"
+        case .Uncoming:
+            return "Uncoming Movies"
+        }
+    }
+    
 }
 
 
 class HomeViewController: UIViewController, UICollectionViewDelegate {
 
     
+    // horizontal cells at the top of the screen
     private let horizontalMenuCollectionView = HorizontalMenuCollectionView()
     
-    private var randomTrendingMovie: Title?
+   // private var randomTrendingMovie: Model?
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
-    let sectionTitles: [String] = ["Top 250 movies", "Top series", "Popular movies", "Top acters"]
+    let sectionTitles: [String] = [Sections.TrendingMovies.name, "Trending Tv", "Popular", "Uncoming Movies"]
     
 
 
@@ -36,14 +51,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
      
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.backgroundColor = .systemBackground
         navigationController?.navigationBar.isTranslucent = false
-        //title = "Главное"
+
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTable)
         
@@ -53,42 +67,39 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-//configureNavBar()
-        
         
         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 600))
         homeFeedTable.tableHeaderView = headerView
         
-        setupViews()
-        setConatraints()
+        setConstraints()
         configureHeroHeaderView()
     }
     
-    private func setupViews() {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        view.backgroundColor = .systemBackground
-       // view.addSubview(mainImageView)
-        view.addSubview(horizontalMenuCollectionView)
-        horizontalMenuCollectionView.cellDelegate = self
+       
+        homeFeedTable.frame = view.bounds
     }
+    
     
     private func configureHeroHeaderView() {
         
-//        APICaller.shared.getTrendingMovies { [weak self] result in
+       // APICaller.shared.getTop250Movies { [weak self] result in
 //            switch result {
 //            case .success(let titles):
 //                let selectedTitle = titles.randomElement()
-//                
+//
 //                self?.randomTrendingMovie = selectedTitle
-//                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
-//                
+//                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.nameRu ?? "", posterURL: selectedTitle?.posterURL ?? ""))
+//
 //            case .failure(let error):
 //                print(error.localizedDescription)
 //            }
-//        }
+       // }
     }
     
-    
+    // To the left of the cells, put then and implement joint movement
     private func configureNavBar() {
         var image = UIImage(named: "kinopoisk")
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -96,16 +107,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         navigationController?.navigationBar.tintColor = .white
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-       
-      
-        homeFeedTable.frame = view.bounds
-    }
+   
        
     }
-
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -138,10 +142,41 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
             
+        //case Sections.TrendingTv.rawValue:
+            
+//            APICaller.shared.getTrendingTvs { result in
+//                switch result {
+//                case .success(let titles):
+//                    cell.configure(with: titles)
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+            //}
    
+//        case Sections.Popular.rawValue:
+//            APICaller.shared.getPopular { result in
+//                switch result {
+//                case .success(let titles):
+//                    cell.configure(with: titles)
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+//            }
+//            
+//        case Sections.Uncoming.rawValue:
+//            APICaller.shared.getUncoming { result in
+//                switch result {
+//                case .success(let titles):
+//                    cell.configure(with: titles)
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+//            }
+            
         default:
             return UITableViewCell()
         }
+
         return cell
     }
     // height sections
@@ -182,8 +217,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension HomeViewController: CollectionViewTableViewCellDelegate {
-    
+extension HomeViewController: ICollectionViewTableViewCellDelegate {
+    // tap in icons -> next open class "TitlePreviewViewController"
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
             let vc = TitlePreviewViewController()
@@ -214,7 +249,7 @@ extension HomeViewController: ISelectCollectionViewItemProtocol {
 
 extension HomeViewController {
     
-    private func setConatraints() {
+    private func setConstraints() {
      
         NSLayoutConstraint.activate([
             

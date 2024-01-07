@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-
+// Реализация цвета, размера и т.д. ячеек сверху главного экрана
 class HorizontalMenuCollectionViewCell: UICollectionViewCell {
     
+    // Label cells
     let nameCategoryLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -41,7 +42,7 @@ class HorizontalMenuCollectionViewCell: UICollectionViewCell {
     
     private func setupViews() {
         backgroundColor = .systemBackground
-        layer.cornerRadius = 10
+       // layer.cornerRadius = 10
         addSubview(nameCategoryLabel)
     }
     
