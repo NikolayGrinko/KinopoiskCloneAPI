@@ -22,6 +22,8 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     private var model = MovieResponse(updatedAt: nil, similarMovies: [])
     
+   
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 140, height: 200)
@@ -63,14 +65,25 @@ class CollectionViewTableViewCell: UITableViewCell {
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    // метод создающий ячейку и возвращающий ее
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell else {
             return UICollectionViewCell()
         }
+        // создаем ячейку с модели
         let cellModel = model.similarMovies[indexPath.row]
+       
+        //cell.title.text = "\(cellModel.name)"
         
-        
-        cell.title.text = "\(cellModel.identifire)"
+        // Берем данные приходящие и кладем на ячейку и ее возвращаем
+        DispatchQueue.global().async {
+            guard let imageUrl = URL(string: cellModel.poster.previewUrl!) else { return }
+            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+            
+            DispatchQueue.main.async {
+                cell.imageView.image = UIImage(data: imageData)
+            }
+        }
         return cell
     }
     
@@ -78,10 +91,11 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         return model.similarMovies.count
     }
     
+    // фиксирует на какую ячейку тапает клиент
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         let title = model.similarMovies[indexPath.row]
         
     }
-    
+  
 }
