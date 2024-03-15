@@ -9,7 +9,7 @@ import UIKit
 
 class MySearchBabyController: UIViewController {
     
-    private var titles: [Title] = [Title]()
+   // private var titles: [Model] = [Model]()
     
     private let searchController: UISearchController = {
         

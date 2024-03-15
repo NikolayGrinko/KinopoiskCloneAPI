@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SearchResultsViewControllerDelegate: AnyObject {
+protocol ISearchResultsViewControllerDelegate: AnyObject {
     
     func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel)
     
@@ -15,9 +15,9 @@ protocol SearchResultsViewControllerDelegate: AnyObject {
 
 class SearchResultsViewController: UIViewController {
 
-    public var titles: [Title] = [Title]()
+    public var titles: [MovieResponse] = [MovieResponse]()
     
-    public weak var delegate: SearchResultsViewControllerDelegate?
+    public weak var delegate: ISearchResultsViewControllerDelegate?
     
     public let searchResultsCollectionView: UICollectionView = {
         
@@ -57,7 +57,7 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
             return UICollectionViewCell()
         }
         let title = titles[indexPath.row]
-        cell.configure(with: title.poster_path ?? "")
+       // cell.configure(with: title.poster_path ?? "")
         return cell
     }
     
@@ -66,7 +66,7 @@ extension SearchResultsViewController: UICollectionViewDelegate, UICollectionVie
         
         let title = titles[indexPath.row]
         
-        let titleName = title.original_title ?? ""
+        //let titleName = title.original_title ?? ""
         
 //        APICaller.shared.getMovie(with: titleName) { [weak self] result in
 //            switch result {

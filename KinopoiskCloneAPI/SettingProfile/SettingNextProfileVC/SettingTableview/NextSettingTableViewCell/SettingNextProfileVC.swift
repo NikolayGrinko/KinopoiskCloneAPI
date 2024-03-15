@@ -83,7 +83,6 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             }),
            
                 .switchCell(model: SettingSwitchOptionsNext(title: "Не блокировать экран", titleMinText: "Во время загрузки экран не будет блокироваться, чтобы скачивание не прервалось", handler: {
-                //Во время загрузки экран не будет блокироваться, чтобы скачивание не прервалось
             }, isOn: true)),
         ]))
         
@@ -96,7 +95,6 @@ class SettingNextProfileVC: UIViewController , UITableViewDelegate, UITableViewD
             .staticCell(model: SettingOptionsNext(title2: "Язык аудиодорожки", titleTrailingSetting: "Русский") {
             }),
             .switchCell(model: SettingSwitchOptionsNext(title: "Автопропуск титров", titleMinText: "Включим следующую серию через 5 секунд, не дожидаясь оканчания титров", handler: {
-                // Включим следующую серию через 5 секунд, не дожидаясь оканчания титров
             }, isOn: true)),
         ]))
         

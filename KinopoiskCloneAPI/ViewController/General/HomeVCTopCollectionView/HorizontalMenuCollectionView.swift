@@ -12,16 +12,18 @@ protocol ISelectCollectionViewItemProtocol: AnyObject {
     func selectItem(index: IndexPath)
 }
 
+// Настройка расположения в своем размере ячеек collectionView вверху экрана
+
 class HorizontalMenuCollectionView: UICollectionView {
     
-    private let categoryLayaut = UICollectionViewFlowLayout()
+    private let categoryLayout = UICollectionViewFlowLayout()
     
-    private let nameCategoryArray = ["Like", "And", "Subscribe", "cmb + B, cmd + R", "Dont lovw", "Channel", "Color Cell and", "CollectionViewLayout"]
+    private let nameCategoryArray = ["Мое кино", "Спорт", "Каналы", "Загрузить", "Подписки", "Лучшее кино"]
     
     weak var cellDelegate: ISelectCollectionViewItemProtocol?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: .zero, collectionViewLayout: categoryLayaut)
+        super.init(frame: .zero, collectionViewLayout: categoryLayout)
         configure()
     }
     
@@ -31,8 +33,9 @@ class HorizontalMenuCollectionView: UICollectionView {
     
     
     private func configure() {
-        categoryLayaut.minimumLineSpacing = 5
-        categoryLayaut.scrollDirection = .horizontal
+        // Минимальный интервал между строками элементов в сетке
+        categoryLayout.minimumLineSpacing = 5
+        categoryLayout.scrollDirection = .horizontal
         // оттяжка
         bounces = false
         // отключил индикатор
@@ -47,7 +50,7 @@ class HorizontalMenuCollectionView: UICollectionView {
         
         register(HorizontalMenuCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
        
-        // при загрузке первая ячейка выделена
+        // при загрузке первая ячейка выделена по "0:0"
         selectItem(at: [0, 0], animated: true, scrollPosition: [])
     }
 }

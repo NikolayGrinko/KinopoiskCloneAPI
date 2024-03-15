@@ -49,8 +49,6 @@ class ButtonTableViewSetting: UITableViewCell {
         configuration.imagePlacement = .top
         configuration.titleAlignment = .automatic
         configuration.baseBackgroundColor = .systemGray5
-//        configuration.attributedTitle = AttributedString("Системная", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
-//        configuration.buttonSize = .large
         configuration.attributedSubtitle = AttributedString("Темная", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(cgColor: .init(gray: 230/220, alpha: 0.5))]))
         configuration.buttonSize = .small
         configuration.contentInsets = .init(top: 20, leading: 10, bottom: 10, trailing: 10)
@@ -70,8 +68,6 @@ class ButtonTableViewSetting: UITableViewCell {
         configuration.imagePlacement = .top
         configuration.titleAlignment = .automatic
         configuration.baseBackgroundColor = .systemGray5
-//        configuration.attributedTitle = AttributedString("Системная", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(white: 230/120, alpha: 1)]))
-//        configuration.buttonSize = .large
         configuration.attributedSubtitle = AttributedString("Светлая", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor(cgColor: .init(gray: 230/220, alpha: 0.5))]))
         configuration.buttonSize = .small
         configuration.contentInsets = .init(top: 20, leading: 10, bottom: 10, trailing: 10)

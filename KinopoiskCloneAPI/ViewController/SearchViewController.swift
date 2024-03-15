@@ -8,8 +8,6 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-//UIScrollViewDelegate , SearchResultsViewControllerDelegate {
-    
     
     private let collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewLayout()
@@ -51,33 +49,20 @@ class SearchViewController: UIViewController {
         
         let controller = UISearchBar()
         controller.placeholder = "Search for a Movie or a Tv show"
-//        controller.backgroundColor = .secondarySystemGroupedBackground
-//        controller.tintColor = .secondarySystemGroupedBackground
-//        controller.barTintColor = .secondarySystemGroupedBackground
         controller.searchBarStyle = .minimal
         return controller
     }()
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        //imageView.tintColor = .secondarySystemGroupedBackground
         imageView.tintColor = .lightGray
         imageView.clipsToBounds = true
         imageView.image = UIImage(systemName: "slider.horizontal.3")
         return imageView
     }()
     
-//    private lazy var  scrollView: UIScrollView = {
-//           let scrollView = UIScrollView()
-//           scrollView.contentSize = CGSize(width: view.bounds.width, height: 1500)
-//           scrollView.backgroundColor = .systemBackground
-//           return scrollView
-//       }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //scrollView.delegate = self
-        //view.addSubview(scrollView)
         
         navigationController?.navigationBar.isHidden = true
         self.view.addSubview(container)
@@ -95,7 +80,6 @@ class SearchViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .systemBackground
         title = "FoodShop"
-        //view.addSubview(orderButton)
         view.addSubview(collectionView)
         
         collectionView.register(SaleCollectionViewCell.self, forCellWithReuseIdentifier: "StoriesCollectionViewCell")
@@ -117,8 +101,6 @@ class SearchViewController: UIViewController {
         searchController.translatesAutoresizingMaskIntoConstraints = false
         container.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //scrollView.translatesAutoresizingMaskIntoConstraints = false
-        //self.view.backgroundColor = .systemBackground
        
         NSLayoutConstraint.activate([
             
@@ -127,14 +109,11 @@ class SearchViewController: UIViewController {
             self.container.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             self.container.heightAnchor.constraint(equalToConstant: 60),
             
-            
             self.searchController.topAnchor.constraint(equalTo: self.container.topAnchor),
             self.searchController.leadingAnchor.constraint(equalTo: self.container.leadingAnchor),
             self.searchController.trailingAnchor.constraint(equalTo: self.imageView.leadingAnchor),
             self.searchController.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             self.searchController.heightAnchor.constraint(equalToConstant: 60),
-            //self.searchController.widthAnchor.constraint(equalToConstant: 330),
-            
             
             self.imageView.topAnchor.constraint(equalTo: self.container.topAnchor, constant: 15),
             self.imageView.bottomAnchor.constraint(equalTo: self.container.bottomAnchor, constant: -15),
@@ -143,11 +122,6 @@ class SearchViewController: UIViewController {
             self.imageView.heightAnchor.constraint(equalToConstant: 30),
             self.imageView.widthAnchor.constraint(equalToConstant: 30),
             
-//            self.scrollView.topAnchor.constraint(equalTo: container.topAnchor, constant: 30),
-//            self.scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            self.scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
-//            self.scrollView.heightAnchor.constraint(equalToConstant: 1500),
-//            self.scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
 
