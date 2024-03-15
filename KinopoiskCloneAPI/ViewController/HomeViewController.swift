@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     private var headerView: HeroHeaderUIView?
     
     //MARK: Заголовки разделов массив
-    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Uncoming Movies"]
+    let sectionTitles: [String] = ["Лучшие 200 фильмов", "Лучшие 100 сериалов", "Популярные фильмы", "Популярные TV передачи"]
     
 
 
